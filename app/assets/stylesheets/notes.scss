@@ -51,6 +51,23 @@ nav {
     .nav-link {
       color: white;
       margin-left: 10px;
+
+      &:hover {
+        color: #E4E4E4;
+        opacity: 0.5;
+      }
     }
+  }
+}
+
+.carousel-inner {
+  height: 520px;
+
+  .carousel-item {
+    height: 520px;
+  }
+
+  img {
+    height: 520px;
   }
 }

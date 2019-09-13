@@ -1,0 +1,56 @@
+// Place all the styles related to the notes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+nav {
+  border-bottom: solid 1px gray;
+
+
+}
+
+.navbar {
+  padding: 25px 200px;
+
+
+  span {
+    font-size: 20px;
+  }
+
+  .navbar-brand {
+    font-size: 35px;
+  }
+
+  .nav-item {
+
+    font-size: 13px;
+
+  }
+
+  .nav-link {
+    opacity: 1;
+  }
+
+  .form-inline {
+    height: 25px;
+    width: 200px;
+
+  }
+
+  .form-control {
+    height: 25px;
+    width: 200px;
+    font-size: 12px;
+    background-color: #E4E4E4;
+    opacity: 0.3;
+  }
+}
+
+.nav {
+  padding: 10px;
+
+  .nav-item {
+    .nav-link {
+      color: white;
+      margin-left: 10px;
+    }
+  }
+}

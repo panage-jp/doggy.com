@@ -1,6 +1,11 @@
 // Place all the styles related to the notes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  width: 100%;
+}
+
 nav {
   border-bottom: solid 1px gray;
 
@@ -70,4 +75,50 @@ nav {
   img {
     height: 520px;
   }
+}
+
+.titles {
+  text-align: center;
+  padding: 40px;
+  font-size: 30px;
+  font-weight: 10;
+  color: #010A17;
+}
+
+.row {
+  padding-bottom: 40px;
+
+}
+
+
+.main2 {
+  background-color: #E4E4E4;
+  padding-bottom: 50px;
+
+}
+
+.main3 {
+  background-color: #EFF0F0;
+  margin-top: 20px;
+  padding-bottom: 30px;
+}
+
+.btn-block {
+  width: 200px;
+  background-color: #285ca6;
+  border: none;
+
+  &:hover {
+    background-color: #285ca6;
+    opacity: 0.5;
+  }
+}
+
+.footer {
+  height: 105px;
+  margin-top: 30px;
+  background-color: #0b2345;
+  margin-right: -15px;
+  margin-left: -15px;
+
 }

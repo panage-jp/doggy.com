@@ -2,7 +2,8 @@
 <html>
 
   <head>
-    <title>Doggy.com</title>
+    <title>Doggy.com | 愛犬情報サイト,SNS</title>
+    <link rel="SHORTCUT ICON" href="assets/favicon.ico">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,7 +13,7 @@
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #0b2345">
-      <a class="navbar-brand mb-0 h1" href="#">Doggy.<span>com<span></a>
+      <a class="navbar-brand mb-0 h1" href="#"><i class="fas fa-paw"></i>Doggy.<span>com<span></a>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,6 +36,8 @@
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         </form>
+        <a class="nav-link logs" href="#"><img class="log" src="assets/f_log.png"></a>
+        <a class="nav-link logs" href="#"><img class="log" src="assets/inst_log2.png"></a>
       </div>
     </nav>
     <%= yield %>

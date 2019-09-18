@@ -20,6 +20,31 @@ nav {
   border-bottom: solid 1px gray;
 
 
+
+}
+
+.newdogg {
+  cursor: pointer;
+
+}
+
+.modal-title {
+  color: #0b2345;
+}
+
+.btn-secondary {
+  color: black;
+  background-color: white;
+}
+
+.btn-primary {
+  background-color: #0b2345;
+  border: #0b2345;
+
+  &:hover {
+    background-color: #0b2345;
+    opacity: 0.7;
+  }
 }
 
 .navbar {
@@ -59,6 +84,30 @@ nav {
   }
 }
 
+
+.header_second {
+
+  .fader {
+    height: 250px;
+    width: 100%;
+    background-color: rgba(11, 35, 69, 0.9);
+    position: absolute;
+    z-index: 3;
+  }
+
+
+}
+
+
+
+
+
+
+
+.hide {
+  display: none;
+}
+
 .nav {
   padding: 10px;
 
@@ -96,15 +145,15 @@ nav {
   color: #010A17;
 }
 
+
+
 .row {
   padding-bottom: 40px;
 
 }
 
 .main1 {
-  .hide {
-    display: none;
-  }
+
 
   .card-img-overlay {
     background-color: rgba(255, 255, 255, 0.7);
@@ -181,11 +230,12 @@ nav {
 
 .dog-icon {
   margin-top: 40px;
-  padding-left: 720px;
   width: 1400px;
+  text-align: center;
 
   .fa-dog {
     color: #0b2345;
+
   }
 
   .fa-dog:hover {

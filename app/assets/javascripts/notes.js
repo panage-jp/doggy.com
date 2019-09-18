@@ -14,5 +14,20 @@ $(document).on('turbolinks:load', function () {
     });
 
 
+  $("#pick_up")
+    .mouseover(function () {
+      $("#pick_up_fader").slideDown();
+    })
+    .mouseout(function () {
+      $("#pick_up_fader").slideUp("fast");
+    });
+
+  $("#shop")
+    .mouseover(function () {
+      $("#shop_fader").slideDown();
+    })
+    .mouseout(function () {
+      $("#shop_fader").slideUp("fast");
+    });
 
 });

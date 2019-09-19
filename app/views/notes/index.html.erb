@@ -1,16 +1,16 @@
-<div class="header_second">
-  <ul class="nav justify-content-center" style="background-color: #0b2345">
+<div class="header_second" style="background-color: #0b2345">
+  <ul class="nav list_nav">
     <li class="nav-item">
       <a class="nav-link newdogg" data-toggle="modal" data-target="#myModal">新規Dogg</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#" id="dog_list">Dogg一覧</a>
+      <a class="nav-link" href="#" id="dog_list" data-fader="0">Dogg一覧</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#" id="pick_up">pick up</a>
+      <a class="nav-link" href="#" id="pick_up" data-fader="1">pick up</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#" id="shop">shop</a>
+      <a class="nav-link" href="#" id="shop" data-fader="2">shop</a>
     </li>
   </ul>
 
@@ -38,11 +38,41 @@
 
 
 
-  <div class="fader hide" id="pick_up_fader">
+  <div class="fader hide" id="pick_up_fader" data-fader="1">
+    <div class="img_layer">
+      <img class="min_image" src="assets/puppy_cut">
+      <img class="min_image" src="assets/pag_cut">
+      <img class="min_image" src="assets/puppy_cut">
+      <img class="min_image" src="assets/pag_cut">
+    </div>
+    <div class="img_layer">
+      <img class="min_image" src="assets/pag_cut">
+      <img class="min_image" src="assets/puppy_cut">
+      <img class="min_image" src="assets/pag_cut">
+      <img class="min_image" src="assets/puppy_cut">
+    </div>
 
   </div>
 
-  <div class="fader hide" id="shop_fader">
+  <div class="fader hide" id="shop_fader" data-fader="2">
+    <div class="icon_layer">
+      <a href="#">
+        <i class="fas fa-bone fa-5x"></i>
+        Foods
+      </a>
+      <a href="#">
+        <i class="fas fa-cut fa-5x"></i>
+        Groomers
+      </a>
+      <a href="#">
+        <i class="fas fa-tshirt fa-5x"></i>
+        Clothes
+      </a>
+      <a href="#">
+        <i class="fas fa-baseball-ball fa-5x"></i>
+        Toys
+      </a>
+    </div>
 
   </div>
 

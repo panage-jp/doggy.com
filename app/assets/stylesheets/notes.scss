@@ -19,8 +19,11 @@
 nav {
   border-bottom: solid 1px gray;
 
+}
 
-
+.list_nav {
+  margin: 0 auto;
+  width: 75%;
 }
 
 .newdogg {
@@ -88,7 +91,7 @@ nav {
 .header_second {
 
   .fader {
-    height: 250px;
+    padding-bottom: 40px;
     width: 100%;
     background-color: rgba(11, 35, 69, 0.9);
     position: absolute;
@@ -120,6 +123,61 @@ nav {
         color: #E4E4E4;
         opacity: 0.7;
       }
+    }
+  }
+}
+
+.img_layer {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+
+
+
+  .min_image {
+    flex: auto;
+    height: 100px;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+@media(max-width: 1000px) {
+  .img_layer {
+    flex-wrap: wrap;
+
+    .min_image {
+      width: 50%;
+    }
+  }
+}
+
+
+.icon_layer {
+  display: flex;
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px 0px;
+
+  a {
+    color: white;
+    display: inline-block;
+    margin: 0 auto;
+  }
+
+  .fas {
+    opacity: 0.8;
+  }
+}
+
+@media(max-width: 1000px) {
+  .icon_layer {
+    flex-wrap: wrap;
+
+    .fas {
+      width: 50%;
     }
   }
 }
@@ -230,7 +288,7 @@ nav {
 
 .dog-icon {
   margin-top: 40px;
-  width: 1400px;
+  width: 100%;
   text-align: center;
 
   .fa-dog {

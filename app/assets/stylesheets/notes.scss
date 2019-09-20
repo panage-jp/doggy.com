@@ -8,6 +8,13 @@
   padding: 0;
 }
 
+.doggy_log {
+  width: 200px;
+  height: 40px;
+  margin-bottom: 10px;
+  padding-left: 5px;
+}
+
 .fa-paw {
   padding-right: 5px;
 }
@@ -20,6 +27,7 @@ nav {
   border-bottom: solid 1px gray;
 
 }
+
 
 .list_nav {
   margin: 0 auto;
@@ -305,8 +313,7 @@ nav {
   height: 120px;
 
   background-color: #0b2345;
-  margin-right: -15px;
-  margin-left: -15px;
+
   padding-top: 35px;
 
   .list-inline {

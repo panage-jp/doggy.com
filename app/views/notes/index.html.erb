@@ -1,263 +1,294 @@
-<div class="header_second" style="background-color: #0b2345">
-  <ul class="nav list_nav">
-    <li class="nav-item">
-      <a class="nav-link newdogg" data-toggle="modal" data-target="#myModal">新規Dogg</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#" id="dog_list" data-fader="0">Dogg一覧</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#" id="pick_up" data-fader="1">pick up</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#" id="shop" data-fader="2">shop</a>
-    </li>
-  </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #0b2345">
+      <a class="navbar-brand mb-0 h1" href="#"><i class="fas fa-paw"></i>Doggy.<span>com<span></a>
 
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">ユーザー登録でDoggy.comをもっと便利に</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p>新規投稿にはログインが必要です</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary">ログイン</button>
-          <button type="button" class="btn btn-primary">新規登録</button>
-        </div><!-- /.modal-footer -->
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav ">
+          <li class="nav-item">
+            <a class="nav-link" href="#">新規会員登録 <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">ログイン</a>
+          </li>
 
+          <li class="nav-item">
+            <a class="nav-link " href="#">ガイド</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        </form>
+        <a class="nav-link logs" href="#"><img class="log" src="assets/f_log.png"></a>
+        <a class="nav-link logs" href="#"><img class="log" src="assets/inst_log2.png"></a>
+      </div>
+    </nav>
 
+    <div class="notes">
 
+      <div class="header_second" style="background-color: #0b2345">
+        <ul class="nav list_nav">
+          <li class="nav-item">
+            <a class="nav-link newdogg" data-toggle="modal" data-target="#myModal">新規Dogg</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="dog_list" data-fader="0">Dogg一覧</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="pick_up" data-fader="1">pick up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="shop" data-fader="2">shop</a>
+          </li>
+        </ul>
 
-  <div class="fader hide" id="pick_up_fader" data-fader="1">
-    <div class="img_layer">
-      <img class="min_image" src="assets/puppy_cut">
-      <img class="min_image" src="assets/pag_cut">
-      <img class="min_image" src="assets/puppy_cut">
-      <img class="min_image" src="assets/pag_cut">
-    </div>
-    <div class="img_layer">
-      <img class="min_image" src="assets/pag_cut">
-      <img class="min_image" src="assets/puppy_cut">
-      <img class="min_image" src="assets/pag_cut">
-      <img class="min_image" src="assets/puppy_cut">
-    </div>
-
-  </div>
-
-  <div class="fader hide" id="shop_fader" data-fader="2">
-    <div class="icon_layer">
-      <a href="#">
-        <i class="fas fa-bone fa-5x"></i>
-        Foods
-      </a>
-      <a href="#">
-        <i class="fas fa-cut fa-5x"></i>
-        Groomers
-      </a>
-      <a href="#">
-        <i class="fas fa-tshirt fa-5x"></i>
-        Clothes
-      </a>
-      <a href="#">
-        <i class="fas fa-baseball-ball fa-5x"></i>
-        Toys
-      </a>
-    </div>
-
-  </div>
-
-</div>
-
-
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="/assets/pag.jpg" alt="第1スライド">
-    </div><!-- /.carousel-item -->
-    <div class="carousel-item">
-      <img class="d-block w-100" src="/assets/dogs.jpg" alt="第2スライド">
-    </div><!-- /.carousel-item -->
-    <div class="carousel-item">
-      <img class="d-block w-100" src="/assets/puppy2.jpg" alt="第3スライド">
-    </div>
-    <!-- スライドコントロールの設定 -->
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">前へ</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">次へ</span>
-    </a>
-  </div>
-</div>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">ユーザー登録でDoggy.comをもっと便利に</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>新規投稿にはログインが必要です</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary">ログイン</button>
+                <button type="button" class="btn btn-primary">新規登録</button>
+              </div><!-- /.modal-footer -->
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
 
 
 
 
 
-<div class="main1 container-fluid">
-  <div class="titles">
-    <em class="h1">Pickup Dogs</em>
-  </div>
-
-  <div class="row">
-    <div class="col-xs-0 col-sm-2 col-md-2">
-    </div>
-
-    <div class="col-xs-6 col-sm-2 col-md-2">
-      <a href="#" class="card picked_dog">
-        <img class="card-img" src="/assets/love.png" alt="picked_up_dog">
-
-        <div class="card-img-overlay hide">
-          <img class="arrow_icon" src="assets/arrow_icon.png">
-          <h5 class="card-title">User_name</h5>
-          <p class="card-text"></p>
-          <p class="card-text"><small>Dog_name</small></p>
-        </div>
-      </a>
-    </div>
-
-    <div class="col-xs-6 col-sm-2 col-md-2">
-      <a href="#" class="card picked_dog">
-        <img class="card-img" src="/assets/love.png" alt="picked_up_dog">
-        <div class="card-img-overlay hide">
-          <img src="assets/arrow_icon.png" class="arrow_icon">
-          <h5 class="card-title">User_name</h5>
-          <p class="card-text"></p>
-          <p class="card-text"><small>Dog_name</small></p>
-        </div>
-      </a>
-    </div>
-
-    <div class="col-xs-6 col-sm-2 col-md-2">
-      <a href="#" class="card picked_dog">
-        <img class="card-img" src="/assets/love.png" alt="picked_up_dog">
-        <div class="card-img-overlay hide">
-          <img src="assets/arrow_icon.png" class="arrow_icon">
-          <h5 class="card-title">User_name</h5>
-          <p class="card-text"></p>
-          <p class="card-text"><small>Dog_name</small></p>
-        </div>
-      </a>
-    </div>
-
-    <div class="col-xs-6 col-sm-2 col-md-2">
-      <a href="#" class="card picked_dog">
-        <img class="card-img" src="/assets/love.png" alt="picked_up_dog">
-        <div class="card-img-overlay hide">
-          <img src="assets/arrow_icon.png" class="arrow_icon">
-          <h5 class="card-title">User_name</h5>
-          <p class="card-text"></p>
-          <p class="card-text"><small>Dog_name</small></p>
-        </div>
-      </a>
-
-    </div>
-
-  </div>
-
-  <div class="row under_line">
-    <div class="col-xs-2 col-sm-2 col-md-2">
-    </div>
-
-    <div class="col-xs-2 col-sm-2 col-md-2">
-      <a href="#" class="card picked_dog">
-        <img class="card-img" src="/assets/love.png" alt="picked_up_dog">
-        <div class="card-img-overlay hide">
-          <img src="assets/arrow_icon.png" class="arrow_icon">
-          <h5 class="card-title">User_name</h5>
-          <p class="card-text"></p>
-          <p class="card-text"><small>Dog_name</small></p>
-        </div>
-      </a>
-
-    </div>
-    <div class="col-xs-2 col-sm-2 col-md-2">
-      <a href="#" class="card picked_dog">
-        <img class="card-img" src="/assets/love.png" alt="picked_up_dog">
-        <div class="card-img-overlay hide">
-          <img src="assets/arrow_icon.png" class="arrow_icon">
-          <h5 class="card-title">User_name</h5>
-          <p class="card-text"></p>
-          <p class="card-text"><small>Dog_name</small></p>
-        </div>
-      </a>
-
-    </div>
-    <div class="col-xs-2 col-sm-2 col-md-2">
-      <a href="#" class="card picked_dog">
-        <img class="card-img" src="/assets/love.png" alt="picked_up_dog">
-        <div class="card-img-overlay hide">
-          <img src="assets/arrow_icon.png" class="arrow_icon">
-          <h5 class="card-title">User_name</h5>
-          <p class="card-text"></p>
-          <p class="card-text"><small>Dog_name</small></p>
-        </div>
-      </a>
-
-    </div>
-    <div class="col-xs-2 col-sm-2 col-md-2">
-      <a href="#" class="card picked_dog">
-        <img class="card-img" src="/assets/love.png" alt="picked_up_dog">
-        <div class="card-img-overlay hide">
-          <img src="assets/arrow_icon.png" class="arrow_icon">
-          <h5 class="card-title">User_name</h5>
-          <p class="card-text"></p>
-          <p class="card-text"><small>Dog_name</small></p>
-        </div>
-      </a>
-
-    </div>
-
-  </div>
-
-  <div class="main2 container-fluid">
-    <div class="titles">
-      <em class="h1">人気のユーザー</em>
-    </div>
-    <div class="row">
-      <div class="col-sm-6 col-md-4 user1">
-        <div class="card img-thumbnail">
-          <img class="card-img-top" src="assets/love.png" alt="人気ユーザー">
-          <div class="card-body px-2 py-3">
-            <h5 class="card-title">User_name</h5>
-            <p class="card-text">コンテンツ コンテンツ コンテンツ コンテンツ</p>
+        <div class="fader hide" id="pick_up_fader" data-fader="1">
+          <div class="img_layer">
+            <img class="min_image" src="assets/puppy_cut">
+            <img class="min_image" src="assets/pag_cut">
+            <img class="min_image" src="assets/puppy_cut">
+            <img class="min_image" src="assets/pag_cut">
           </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4 user2">
-        <div class="card img-thumbnail">
-          <img class="card-img-top" src="assets/love.png" alt="人気ユーザー">
-          <div class="card-body px-2 py-3">
-            <h5 class="card-title">User_name</h5>
-            <p class="card-text">コンテンツ コンテンツ コンテンツ コンテンツ</p>
+          <div class="img_layer">
+            <img class="min_image" src="assets/pag_cut">
+            <img class="min_image" src="assets/puppy_cut">
+            <img class="min_image" src="assets/pag_cut">
+            <img class="min_image" src="assets/puppy_cut">
           </div>
+
         </div>
-      </div>
-      <div class="col-sm-6 col-md-4 user3">
-        <div class="card img-thumbnail">
-          <img class="card-img-top" src="assets/love.png" alt="人気ユーザー">
-          <div class="card-body px-2 py-3">
-            <h5 class="card-title">User_name</h5>
-            <p class="card-text">コンテンツ コンテンツ コンテンツ コンテンツ</p>
+
+        <div class="fader hide" id="shop_fader" data-fader="2">
+          <div class="icon_layer">
+            <a href="#">
+              <i class="fas fa-bone fa-5x"></i>
+              Foods
+            </a>
+            <a href="#">
+              <i class="fas fa-cut fa-5x"></i>
+              Groomers
+            </a>
+            <a href="#">
+              <i class="fas fa-tshirt fa-5x"></i>
+              Clothes
+            </a>
+            <a href="#">
+              <i class="fas fa-baseball-ball fa-5x"></i>
+              Toys
+            </a>
           </div>
+
+        </div>
+
+      </div>
+
+
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="/assets/pag.jpg" alt="第1スライド">
+          </div><!-- /.carousel-item -->
+          <div class="carousel-item">
+            <img class="d-block w-100" src="/assets/dogs.jpg" alt="第2スライド">
+          </div><!-- /.carousel-item -->
+          <div class="carousel-item">
+            <img class="d-block w-100" src="/assets/puppy2.jpg" alt="第3スライド">
+          </div>
+          <!-- スライドコントロールの設定 -->
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">前へ</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">次へ</span>
+          </a>
         </div>
       </div>
-    </div>
-    <a class="btn btn-primary btn-block container" href="#" role="button">View more</a>
-  </div>
+
+
+
+
+
+      <div class="main1 container-fluid">
+        <div class="titles">
+          <em class="h1">Pickup Dogs</em>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-0 col-sm-2 col-md-2">
+          </div>
+
+          <div class="col-xs-6 col-sm-2 col-md-2">
+            <a href="#" class="card picked_dog">
+              <img class="card-img" src="/assets/love.png" alt="picked_up_dog">
+
+              <div class="card-img-overlay hide">
+                <img class="arrow_icon" src="assets/arrow_icon.png">
+                <h5 class="card-title">User_name</h5>
+                <p class="card-text"></p>
+                <p class="card-text"><small>Dog_name</small></p>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-xs-6 col-sm-2 col-md-2">
+            <a href="#" class="card picked_dog">
+              <img class="card-img" src="/assets/love.png" alt="picked_up_dog">
+              <div class="card-img-overlay hide">
+                <img src="assets/arrow_icon.png" class="arrow_icon">
+                <h5 class="card-title">User_name</h5>
+                <p class="card-text"></p>
+                <p class="card-text"><small>Dog_name</small></p>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-xs-6 col-sm-2 col-md-2">
+            <a href="#" class="card picked_dog">
+              <img class="card-img" src="/assets/love.png" alt="picked_up_dog">
+              <div class="card-img-overlay hide">
+                <img src="assets/arrow_icon.png" class="arrow_icon">
+                <h5 class="card-title">User_name</h5>
+                <p class="card-text"></p>
+                <p class="card-text"><small>Dog_name</small></p>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-xs-6 col-sm-2 col-md-2">
+            <a href="#" class="card picked_dog">
+              <img class="card-img" src="/assets/love.png" alt="picked_up_dog">
+              <div class="card-img-overlay hide">
+                <img src="assets/arrow_icon.png" class="arrow_icon">
+                <h5 class="card-title">User_name</h5>
+                <p class="card-text"></p>
+                <p class="card-text"><small>Dog_name</small></p>
+              </div>
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="row under_line">
+          <div class="col-xs-2 col-sm-2 col-md-2">
+          </div>
+
+          <div class="col-xs-2 col-sm-2 col-md-2">
+            <a href="#" class="card picked_dog">
+              <img class="card-img" src="/assets/love.png" alt="picked_up_dog">
+              <div class="card-img-overlay hide">
+                <img src="assets/arrow_icon.png" class="arrow_icon">
+                <h5 class="card-title">User_name</h5>
+                <p class="card-text"></p>
+                <p class="card-text"><small>Dog_name</small></p>
+              </div>
+            </a>
+
+          </div>
+          <div class="col-xs-2 col-sm-2 col-md-2">
+            <a href="#" class="card picked_dog">
+              <img class="card-img" src="/assets/love.png" alt="picked_up_dog">
+              <div class="card-img-overlay hide">
+                <img src="assets/arrow_icon.png" class="arrow_icon">
+                <h5 class="card-title">User_name</h5>
+                <p class="card-text"></p>
+                <p class="card-text"><small>Dog_name</small></p>
+              </div>
+            </a>
+
+          </div>
+          <div class="col-xs-2 col-sm-2 col-md-2">
+            <a href="#" class="card picked_dog">
+              <img class="card-img" src="/assets/love.png" alt="picked_up_dog">
+              <div class="card-img-overlay hide">
+                <img src="assets/arrow_icon.png" class="arrow_icon">
+                <h5 class="card-title">User_name</h5>
+                <p class="card-text"></p>
+                <p class="card-text"><small>Dog_name</small></p>
+              </div>
+            </a>
+
+          </div>
+          <div class="col-xs-2 col-sm-2 col-md-2">
+            <a href="#" class="card picked_dog">
+              <img class="card-img" src="/assets/love.png" alt="picked_up_dog">
+              <div class="card-img-overlay hide">
+                <img src="assets/arrow_icon.png" class="arrow_icon">
+                <h5 class="card-title">User_name</h5>
+                <p class="card-text"></p>
+                <p class="card-text"><small>Dog_name</small></p>
+              </div>
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="main2 container-fluid">
+          <div class="titles">
+            <em class="h1">人気のユーザー</em>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 col-md-4 user1">
+              <div class="card img-thumbnail">
+                <img class="card-img-top" src="assets/love.png" alt="人気ユーザー">
+                <div class="card-body px-2 py-3">
+                  <h5 class="card-title">User_name</h5>
+                  <p class="card-text">コンテンツ コンテンツ コンテンツ コンテンツ</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 user2">
+              <div class="card img-thumbnail">
+                <img class="card-img-top" src="assets/love.png" alt="人気ユーザー">
+                <div class="card-body px-2 py-3">
+                  <h5 class="card-title">User_name</h5>
+                  <p class="card-text">コンテンツ コンテンツ コンテンツ コンテンツ</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 user3">
+              <div class="card img-thumbnail">
+                <img class="card-img-top" src="assets/love.png" alt="人気ユーザー">
+                <div class="card-body px-2 py-3">
+                  <h5 class="card-title">User_name</h5>
+                  <p class="card-text">コンテンツ コンテンツ コンテンツ コンテンツ</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="btn btn-primary btn-block container" href="#" role="button">View more</a>
+        </div>
 
 
 
@@ -265,136 +296,125 @@
 
 
 
-  <div class="main3 container-fluid">
-    <div class="titles">
-      <em class="h1">Items</em>
-    </div>
+        <div class="main3 container-fluid">
+          <div class="titles">
+            <em class="h1">Items</em>
+          </div>
 
-    <div class="row">
-      <div class="col-xs-2 col-sm-2 col-md-2">
+          <div class="row">
+            <div class="col-xs-2 col-sm-2 col-md-2">
+            </div>
+
+            <div class="col-xs-2 col-sm-2 col-md-2">
+              <a href="#" class="card">
+                <img class="card-img" src="/assets/love.png" alt="商品">
+              </a>
+
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-2">
+              <a href="#" class="card">
+                <img class="card-img" src="/assets/love.png" alt="商品">
+              </a>
+
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-2">
+              <a href="#" class="card">
+                <img class="card-img" src="/assets/love.png" alt="商品">
+              </a>
+
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-2">
+              <a href="#" class="card">
+                <img class="card-img" src="/assets/love.png" alt="商品">
+              </a>
+
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col-xs-2 col-sm-2 col-md-2">
+            </div>
+
+            <div class="col-xs-2 col-sm-2 col-md-2">
+              <a href="#" class="card">
+                <img class="card-img" src="/assets/love.png" alt="商品">
+              </a>
+
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-2">
+              <a href="#" class="card">
+                <img class="card-img" src="/assets/love.png" alt="商品">
+              </a>
+
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-2">
+              <a href="#" class="card">
+                <img class="card-img" src="/assets/love.png" alt="商品">
+              </a>
+
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-2">
+              <a href="#" class="card">
+                <img class="card-img " src="/assets/love.png" alt="商品">
+              </a>
+
+            </div>
+
+
+          </div>
+          <a class="btn btn-primary btn-block container" href="#" role="button">View more</a>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="main4 container-fluid">
+          <div class="titles">
+            <em class="h1">Instagrams</em>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-2 col-sm-2 col-md-2">
+            </div>
+
+            <div class="col-xs-2 col-sm-2 col-md-2">
+              <a href="#" class="card">
+                <img class="card-img" src="/assets/love.png" alt="インスタ">
+              </a>
+
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-2">
+              <a href="#" class="card">
+                <img class="card-img" src="/assets/love.png" alt="インスタ">
+              </a>
+
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-2">
+              <a href="#" class="card">
+                <img class="card-img" src="/assets/love.png" alt="インスタ">
+              </a>
+
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-2">
+              <a href="#" class="card">
+                <img class="card-img" src="/assets/love.png" alt="インスタ">
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+        </div>
+        <div class="dog-icon">
+          <i class="fas fa-dog fa-3x "></i>
+        </div>
+
       </div>
 
-      <div class="col-xs-2 col-sm-2 col-md-2">
-        <a href="#" class="card">
-          <img class="card-img" src="/assets/love.png" alt="商品">
-        </a>
-
-      </div>
-      <div class="col-xs-2 col-sm-2 col-md-2">
-        <a href="#" class="card">
-          <img class="card-img" src="/assets/love.png" alt="商品">
-        </a>
-
-      </div>
-      <div class="col-xs-2 col-sm-2 col-md-2">
-        <a href="#" class="card">
-          <img class="card-img" src="/assets/love.png" alt="商品">
-        </a>
-
-      </div>
-      <div class="col-xs-2 col-sm-2 col-md-2">
-        <a href="#" class="card">
-          <img class="card-img" src="/assets/love.png" alt="商品">
-        </a>
-
-      </div>
-
-    </div>
-    <div class="row">
-      <div class="col-xs-2 col-sm-2 col-md-2">
-      </div>
-
-      <div class="col-xs-2 col-sm-2 col-md-2">
-        <a href="#" class="card">
-          <img class="card-img" src="/assets/love.png" alt="商品">
-        </a>
-
-      </div>
-      <div class="col-xs-2 col-sm-2 col-md-2">
-        <a href="#" class="card">
-          <img class="card-img" src="/assets/love.png" alt="商品">
-        </a>
-
-      </div>
-      <div class="col-xs-2 col-sm-2 col-md-2">
-        <a href="#" class="card">
-          <img class="card-img" src="/assets/love.png" alt="商品">
-        </a>
-
-      </div>
-      <div class="col-xs-2 col-sm-2 col-md-2">
-        <a href="#" class="card">
-          <img class="card-img " src="/assets/love.png" alt="商品">
-        </a>
-
-      </div>
-
-
-    </div>
-    <a class="btn btn-primary btn-block container" href="#" role="button">View more</a>
-  </div>
-
-
-
-
-
-
-
-
-  <div class="main4 container-fluid">
-    <div class="titles">
-      <em class="h1">Instagrams</em>
-    </div>
-
-    <div class="row">
-      <div class="col-xs-2 col-sm-2 col-md-2">
-      </div>
-
-      <div class="col-xs-2 col-sm-2 col-md-2">
-        <a href="#" class="card">
-          <img class="card-img" src="/assets/love.png" alt="インスタ">
-        </a>
-
-      </div>
-      <div class="col-xs-2 col-sm-2 col-md-2">
-        <a href="#" class="card">
-          <img class="card-img" src="/assets/love.png" alt="インスタ">
-        </a>
-
-      </div>
-      <div class="col-xs-2 col-sm-2 col-md-2">
-        <a href="#" class="card">
-          <img class="card-img" src="/assets/love.png" alt="インスタ">
-        </a>
-
-      </div>
-      <div class="col-xs-2 col-sm-2 col-md-2">
-        <a href="#" class="card">
-          <img class="card-img" src="/assets/love.png" alt="インスタ">
-        </a>
-
-      </div>
-
-    </div>
-
-
-
-  </div>
-  <div class="dog-icon">
-    <i class="fas fa-dog fa-3x "></i>
-  </div>
-
-
-
-
-
-  <div class="footer">
-    <ul class="list-inline ">
-      <li class="list-inline-item"><a href="#">ご利用規約</a></li>
-      <li class="list-inline-item"><a href="#">プライボリシー</a></li>
-      <li class="list-inline-item"><a href="#">よくあるご質問</a></li>
-      <li class="list-inline-item"><a href="#">お問い合わせ</a></li>
-      <li class="list-inline-item"><a href="#">事業者専用リンク</a></li>
-    </ul>
-
-  </div>
+      <%= render partial: "footer"%>

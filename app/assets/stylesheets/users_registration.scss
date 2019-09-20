@@ -1,0 +1,51 @@
+.users-registration {
+  background-color: #E4E4E4;
+  padding-top: 30px;
+
+  .register-form {
+    background-color: white;
+    width: 350px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    padding-top: 30px;
+
+    .input-form {
+      text-align: center;
+
+      .btn {
+        width: 100%;
+      }
+
+      .doggy_logo {
+        height: auto;
+        width: 70%;
+        margin-bottom: 40px;
+      }
+    }
+
+    .mataha {
+      color: gray;
+      margin-top: 8px;
+
+      span {
+        font-size: 12px;
+      }
+    }
+
+    .facebook_a {
+      text-decoration: none;
+
+      &:hover {}
+
+      .facebook-login {
+        font-weight: bold;
+
+        .facebook_logo {
+          height: 23px;
+          width: auto;
+        }
+      }
+    }
+  }
+
+}

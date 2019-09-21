@@ -1,6 +1,11 @@
 .users-registration {
   background-color: #E4E4E4;
-  padding-top: 30px;
+  padding-top: 70px;
+  height: 100vh;
+
+  .footer_modifier {
+    height: calc(100vh - 190px)
+  }
 
   .register-form {
     background-color: white;
@@ -25,7 +30,7 @@
 
     .mataha {
       color: gray;
-      margin-top: 8px;
+      margin-top: 10px;
 
       span {
         font-size: 12px;
@@ -34,18 +39,52 @@
 
     .facebook_a {
       text-decoration: none;
+      color: #1877f2;
+      font-size: 12px;
 
-      &:hover {}
+
+      &:hover {
+        color: #1877f2;
+      }
 
       .facebook-login {
         font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 8px;
+        margin-top: 12px;
 
         .facebook_logo {
           height: 23px;
           width: auto;
         }
       }
+
+
+    }
+
+
+  }
+
+
+
+  .change-form_register {
+    background-color: white;
+    width: 350px;
+    margin: 15px auto;
+    padding: 5px 40px;
+    display: flex;
+
+    p,
+    a {
+
+      font-size: 13px;
+      margin: 10px 0;
+    }
+
+    a {
+      padding-left: 2px;
     }
   }
+
 
 }

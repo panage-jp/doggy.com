@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+
 .log {
   height: 20px;
   width: 20px;
@@ -342,6 +344,12 @@ nav {
     }
   }
 
-
+  .footer_last {
+    padding-top: 5px;
+    width: 200px;
+    color: gray;
+    font-size: 5px;
+    margin: 0 auto;
+  }
 
 }

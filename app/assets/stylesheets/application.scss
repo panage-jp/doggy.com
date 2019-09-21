@@ -14,7 +14,10 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 @import "notes";
-@import "users_registration";
+@import "users_login";
+@import "users_signin";
+@import "footer";
+@import "header";
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 

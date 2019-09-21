@@ -1,0 +1,104 @@
+.usersSignin {
+  background-color: #EFF0F0;
+  padding-top: 20px;
+  height: 100vh;
+
+  .footer_modifier {
+    height: calc(100vh - 140px)
+  }
+
+
+
+
+
+  .change-form_register {
+    background-color: white;
+    width: 350px;
+    margin: 15px auto;
+    padding: 5px 40px;
+    display: flex;
+
+    p,
+    a {
+
+      font-size: 13px;
+      margin: 10px 0;
+    }
+
+    a {
+      padding-left: 2px;
+    }
+  }
+
+  .register-form {
+    background-color: white;
+    width: 350px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    padding-top: 30px;
+
+    .registration-form__message {
+      color: grey;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+
+
+    .input-form {
+      text-align: center;
+
+      .btn {
+        width: 100%;
+      }
+
+      .doggy_logo {
+        height: auto;
+        width: 70%;
+        margin-bottom: 10px;
+      }
+    }
+
+    .form-control {
+      font-size: 10px;
+    }
+
+    .btn-facebook_signin {
+      height: 36px;
+      color: white;
+      background-color: #1877f2;
+      margin-top: 10px;
+
+      .fa-facebook-f {
+        margin-right: 3px;
+      }
+
+      &:hover {
+        background-color: #1877f2;
+      }
+    }
+
+    .mataha {
+      color: gray;
+      margin-top: 15px;
+      margin-bottom: 10px;
+
+      span {
+        font-size: 12px;
+      }
+    }
+
+    .confirmRegister {
+      color: gray;
+      font-size: 12px;
+      margin-top: 8px;
+
+      span {
+        font-weight: bold;
+      }
+    }
+
+  }
+
+
+}

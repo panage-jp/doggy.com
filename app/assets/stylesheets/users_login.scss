@@ -1,10 +1,33 @@
-.users-registration {
-  background-color: #E4E4E4;
+.usersLogin {
+  background-color: #EFF0F0;
   padding-top: 70px;
   height: 100vh;
 
   .footer_modifier {
     height: calc(100vh - 190px)
+  }
+
+
+
+
+
+  .change-form_register {
+    background-color: white;
+    width: 350px;
+    margin: 15px auto;
+    padding: 5px 40px;
+    display: flex;
+
+    p,
+    a {
+
+      font-size: 13px;
+      margin: 10px 0;
+    }
+
+    a {
+      padding-left: 2px;
+    }
   }
 
   .register-form {
@@ -26,6 +49,12 @@
         width: 70%;
         margin-bottom: 40px;
       }
+    }
+
+
+
+    .form-control {
+      font-size: 10px;
     }
 
     .mataha {
@@ -64,27 +93,4 @@
 
 
   }
-
-
-
-  .change-form_register {
-    background-color: white;
-    width: 350px;
-    margin: 15px auto;
-    padding: 5px 40px;
-    display: flex;
-
-    p,
-    a {
-
-      font-size: 13px;
-      margin: 10px 0;
-    }
-
-    a {
-      padding-left: 2px;
-    }
-  }
-
-
 }

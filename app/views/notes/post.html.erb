@@ -35,29 +35,10 @@
         </div>
       </div>
       <div class="post_row_right col-xs-12 col-sm-6 ">
-        <div class="post__maincontent-posts">
-          <div class="post__maincontent-posts-title">
-            <i class="fas fa-user-circle fa-2x"></i>
-            <a class="user_name" href="#">User_name</a>
-            <div class="fas-modifier">
-              <a href="#"><i class="fas fa-ellipsis-v"></i></a>
-            </div>
-          </div>
-          <div class="post__maincontent-posts-image">
-            <img src="assets/love.png">
-          </div>
-          <div class="post__maincontent-posts-icons">
-            <a href="#" class="post__maincontent-posts-icons-a"><i class="far fa-heart fa-2x"></i></a>
-            <a href="#" class="post__maincontent-posts-icons-a"><i class="far fa-comment fa-2x"></i></a>
-          </div>
-          <div class="post__maincontent-posts-comments">
-            犬犬犬犬犬犬犬犬犬犬犬犬.....<a href="#" class="tuzuki">続きを読む</a>
-          </div>
-          <div class="post__maincontent-posts-commentform">
-            <textarea placeholder="コメントを入力...."></textarea>
-          </div>
-
-        </div>
+        <%= render partial:"postContent", locals: {id: "1"}%>
+        <%= render partial:"postContent", locals: {id: "2"}%>
+        <%= render partial:"postContent", locals: {id: "3"}%>
+        <%= render partial:"postContent", locals: {id: "4"}%>
       </div>
 
     </div>

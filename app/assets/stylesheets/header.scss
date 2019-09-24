@@ -56,6 +56,17 @@
     background-color: #E4E4E4;
     opacity: 0.3;
   }
+}
+
+.header_second {
+
+  .fader {
+    padding-bottom: 40px;
+    width: 100%;
+    background-color: rgba(11, 35, 69, 0.9);
+    position: absolute;
+    z-index: 3;
+  }
 
 
 
@@ -76,18 +87,6 @@
       background-color: #0b2345;
       opacity: 0.7;
     }
-  }
-
-}
-
-.header_second {
-
-  .fader {
-    padding-bottom: 40px;
-    width: 100%;
-    background-color: rgba(11, 35, 69, 0.9);
-    position: absolute;
-    z-index: 3;
   }
 
   .list_nav {

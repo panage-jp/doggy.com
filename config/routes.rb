@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get "signin" => "notes#signin"
   get "login" => "notes#login"
   get "post" => "notes#post"
+  get "shows" => "notes#shows"
 end

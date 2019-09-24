@@ -21,7 +21,7 @@ $(document).on('turbolinks:load', function () {
       $(".fader").slideUp("fast");
       $(".activative").removeClass("activative")
     })
-  $(".carousel-item")
+  $(".grandPart")
     .mouseover(function () {
       $(".fader").slideUp("fast");
       $(".activative").removeClass("activative")

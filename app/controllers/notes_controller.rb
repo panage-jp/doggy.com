@@ -21,6 +21,9 @@ class NotesController < ApplicationController
   def post
   end
 
+  def shows
+  end
+
   # GET /notes/new
   def new
     @note = Note.new

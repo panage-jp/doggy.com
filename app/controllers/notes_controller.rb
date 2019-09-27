@@ -21,7 +21,7 @@ class NotesController < ApplicationController
   def post
   end
 
-  def shows
+  def user_index
   end
 
   # GET /notes/new

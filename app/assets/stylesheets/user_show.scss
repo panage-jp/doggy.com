@@ -69,5 +69,29 @@
 
   }
 
+  .modal-body {
+    p {
+      margin-top: 12px;
+      margin-bottom: 0px;
+    }
 
+    input {
+      border: solid #E4E4E4 1px;
+      width: 60%;
+    }
+
+    textarea {
+      border: solid #E4E4E4 1px;
+      width: 60%;
+      resize: none;
+    }
+
+    .fa-image {
+      cursor: pointer;
+    }
+
+    a {
+      font-size: 15px;
+    }
+  }
 }

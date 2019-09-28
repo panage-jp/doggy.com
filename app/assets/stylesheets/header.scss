@@ -1,0 +1,184 @@
+.navbar {
+  border-bottom: solid 1px gray;
+  padding: 25px 200px;
+
+
+
+  .doggy_log {
+    width: 200px;
+    height: 40px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+  }
+
+  .fa-paw {
+    padding-right: 5px;
+  }
+
+  .logs {
+    padding: 5px;
+
+    .log {
+      height: 20px;
+      width: 20px;
+      padding: 0;
+    }
+  }
+
+  span {
+    font-size: 20px;
+  }
+
+  .navbar-brand {
+    font-size: 35px;
+  }
+
+  .nav-item {
+
+    font-size: 13px;
+
+  }
+
+  .nav-link {
+    opacity: 1;
+  }
+
+  .form-inline {
+    height: 25px;
+    width: 200px;
+
+  }
+
+  .form-control {
+    height: 25px;
+    width: 200px;
+    font-size: 12px;
+    background-color: #E4E4E4;
+    opacity: 0.3;
+  }
+}
+
+.header_second {
+
+  .fader {
+    padding-bottom: 40px;
+    width: 100%;
+    background-color: rgba(11, 35, 69, 0.9);
+    position: absolute;
+    z-index: 3;
+  }
+
+
+
+  .modal-title {
+    color: #0b2345;
+  }
+
+  .btn-secondary {
+    color: black;
+    background-color: white;
+  }
+
+  .btn-primary {
+    background-color: #0b2345;
+    border: #0b2345;
+
+    &:hover {
+      background-color: #0b2345;
+      opacity: 0.7;
+    }
+  }
+
+  textarea {
+    width: 30vw;
+    resize: none;
+    border-radius: 5px;
+    border: solid #E4E4E4 1px;
+  }
+
+  .list_nav {
+    margin: 0 auto;
+    width: 75%;
+  }
+
+  .newdogg {
+    cursor: pointer;
+
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .nav {
+    padding: 10px;
+
+    .nav-item {
+      .nav-link {
+        color: white;
+        margin-left: 10px;
+
+        &:hover {
+          color: #E4E4E4;
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  .img_layer {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+
+
+
+    .min_image {
+      flex: auto;
+      height: 100px;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  @media(max-width: 1000px) {
+    .img_layer {
+      flex-wrap: wrap;
+
+      .min_image {
+        width: 50%;
+      }
+    }
+  }
+
+
+  .icon_layer {
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px 0px;
+
+    a {
+      color: white;
+      display: inline-block;
+      margin: 0 auto;
+    }
+
+    .fas {
+      opacity: 0.8;
+    }
+  }
+
+  @media(max-width: 1000px) {
+    .icon_layer {
+      flex-wrap: wrap;
+
+      .fas {
+        width: 50%;
+      }
+    }
+  }
+
+}

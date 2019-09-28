@@ -1,0 +1,49 @@
+<%= render partial: "header"%>
+<div class="post grandPart">
+  <div class="container-fluid post__mainContent">
+
+    <div class="row post_row ">
+      <div class="col-xs-0 col-sm-0 col-md-1 ">
+      </div>
+
+      <div class="post_row_left col-xs-12 col-sm-12 col-md-2 ">
+        <div class="post__user">
+          <i class="fas fa-user-circle fa-3x"></i>
+          <div class="post__user-name">
+            <p class="post__user-name_user">User_name</p>
+            <p class="post__user-name_dog">Dog_name</p>
+          </div>
+
+        </div>
+        <div class="post__pickedUser">
+          <div class="post__pickedUser-title">
+            <p class="osusume">おすすめ</p>
+            <a href="/user_index" class="subete">すべて見る</a>
+          </div>
+          <div class="post__pickedUser-user">
+            <i class="fas fa-user-circle fa-2x"></i>
+            <a class="user_name" href="#">User_name</a>
+          </div>
+          <div class="post__pickedUser-user">
+            <i class="fas fa-user-circle fa-2x"></i>
+            <a class="user_name" href="#">User_name</a>
+          </div>
+          <div class="post__pickedUser-user">
+            <i class="fas fa-user-circle fa-2x"></i>
+            <a class="user_name" href="#">User_name</a>
+          </div>
+
+        </div>
+      </div>
+      <div class="post_row_right col-xs-12 col-sm-6 ">
+        <%= render partial:"postContent", locals: {id: "1"}%>
+        <%= render partial:"postContent", locals: {id: "2"}%>
+        <%= render partial:"postContent", locals: {id: "3"}%>
+        <%= render partial:"postContent", locals: {id: "4"}%>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<%= render partial:"footer"%>

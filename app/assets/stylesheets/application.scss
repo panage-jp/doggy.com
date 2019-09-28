@@ -14,3 +14,27 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 @import "notes";
+@import "users_login";
+@import "users_signin";
+@import "post";
+@import "user_index";
+@import "user_show";
+@import "footer";
+@import "header";
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
+
+
+
+body {
+  font-family: 'Hiragino Kaku Gothic Pro',
+    'ヒラギノ角ゴ Pro W3',
+    'メイリオ',
+    Meiryo,
+    'ＭＳ Ｐゴシック',
+    sans-serif;
+}
+
+.hide {
+  display: none;
+}

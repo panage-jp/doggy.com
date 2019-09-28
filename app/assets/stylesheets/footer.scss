@@ -1,0 +1,42 @@
+.footer {
+  height: 120px;
+
+  background-color: #0b2345;
+
+  padding-top: 35px;
+
+  .list-inline {
+    text-align: center;
+
+    .list-inline-item {
+      color: white;
+      font-size: 12px;
+      padding: 0px 20px;
+      margin: 0;
+
+      a {
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+
+    }
+
+    .list-inline-item+.list-inline-item {
+      border-left: solid 1px gray;
+
+    }
+  }
+
+  .footer_last {
+    padding-top: 5px;
+    width: 200px;
+    color: gray;
+    font-size: 5px;
+    margin: 0 auto;
+  }
+
+}

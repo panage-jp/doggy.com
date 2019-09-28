@@ -1,56 +1,125 @@
 // Place all the styles related to the notes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-nav {
-  border-bottom: solid 1px gray;
+.carousel-inner {
+  height: 520px;
 
-
-}
-
-.navbar {
-  padding: 25px 200px;
-
-
-  span {
-    font-size: 20px;
+  .carousel-item {
+    height: 520px;
   }
 
-  .navbar-brand {
-    font-size: 35px;
-  }
-
-  .nav-item {
-
-    font-size: 13px;
-
-  }
-
-  .nav-link {
-    opacity: 1;
-  }
-
-  .form-inline {
-    height: 25px;
-    width: 200px;
-
-  }
-
-  .form-control {
-    height: 25px;
-    width: 200px;
-    font-size: 12px;
-    background-color: #E4E4E4;
-    opacity: 0.3;
+  img {
+    height: 520px;
+    object-fit: cover;
   }
 }
 
-.nav {
-  padding: 10px;
+.titles {
+  text-align: center;
+  padding: 40px;
+  font-size: 30px;
+  font-weight: 10;
+  color: #010A17;
+}
 
-  .nav-item {
-    .nav-link {
-      color: white;
-      margin-left: 10px;
+
+
+.row {
+  padding-bottom: 40px;
+
+}
+
+.main1 {
+
+
+  .card-img-overlay {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: black;
+
+    .arrow_icon {
+      padding-left: 43px;
+      padding-top: 40px;
     }
+  }
+
+  .under_line {
+    border-bottom: solid 1px #E4E4E4;
+  }
+
+  .hide {
+    display: none;
+  }
+}
+
+.main2 {
+  padding-bottom: 60px;
+
+  .col-md-4 {
+    padding: 0 100px;
+
+    .card {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .user1 {
+    padding-right: 0px;
+    padding-left: 200px;
+  }
+
+  .user3 {
+    padding-right: 200px;
+    padding-left: 0px;
+  }
+}
+
+.main3 {
+  background-color: #E4E4E4;
+  padding-bottom: 50px;
+
+  .card {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.main4 {
+  background-color: #EFF0F0;
+  margin-top: 20px;
+  padding-bottom: 30px;
+
+  .card {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.btn-block {
+  width: 200px;
+  background-color: #285ca6;
+  border: none;
+
+  &:hover {
+    background-color: #285ca6;
+    opacity: 0.7;
+  }
+}
+
+.dog-icon {
+  margin-top: 40px;
+  width: 100%;
+  text-align: center;
+
+  .fa-dog {
+    color: #0b2345;
+
+  }
+
+  .fa-dog:hover {
+    opacity: 0.7;
   }
 }

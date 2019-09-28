@@ -12,6 +12,18 @@ class NotesController < ApplicationController
   def show
   end
 
+  def signin
+  end
+
+  def login
+  end
+
+  def post
+  end
+
+  def user_index
+  end
+
   # GET /notes/new
   def new
     @note = Note.new

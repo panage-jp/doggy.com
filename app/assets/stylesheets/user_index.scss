@@ -1,0 +1,53 @@
+.user_index {
+  background-color: #EFF0F0;
+  height: calc(100vh - 293px);
+
+  .main {
+    background-color: white;
+    margin-top: 35px;
+
+
+
+    .main__title {
+      font-weight: bold;
+      font-size: 20px;
+      margin-top: 15px;
+    }
+
+    .main__serchbox {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .main__users {
+      overflow: scroll;
+      height: 40vh;
+
+
+      .main__users-user {
+        display: flex;
+        margin-bottom: 15px;
+        margin-top: 15px;
+
+        .user_name {
+          line-height: 32px;
+          color: black;
+          text-decoration: none;
+          display: inline-block;
+          margin-left: 5px;
+
+          &:hover {
+            color: black;
+          }
+
+        }
+
+        .dog_name {
+          color: gray;
+          font-size: 12px;
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+}

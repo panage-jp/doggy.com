@@ -15,4 +15,10 @@ $(document).on('turbolinks:load', function () {
     $(`.posts__puttogether[data-id=${id}] .post__maincontent-posts:last`).addClass("hide");
 
   })
+
+  //画像の投稿処理
+  $("#image_post").click(function (e) {
+    e.preventDefault()
+    $("#image_post_input").trigger('click');
+  });
 })

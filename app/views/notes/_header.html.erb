@@ -43,7 +43,7 @@
         </li>
       </ul>
 
-      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -58,10 +58,36 @@
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary">ログイン</button>
               <button type="button" class="btn btn-primary">新規登録</button>
-            </div><!-- /.modal-footer -->
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">新規投稿する</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <textarea rows="8" placeholder="テキスト"></textarea>
+              <div class="posted_images">
+              </div>
+              <div class="post__form-image">
+                <button type="button" class="btn btn-light" id="image_post">画像を追加</button>
+                <input type="file" name="image_file[]" multiple="multiple" id="image_post_input" class="hide"></input>
+                <button type="button" class="btn btn-light">タグを追加</button>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">投稿する</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
 

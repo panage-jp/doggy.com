@@ -89,6 +89,13 @@
     }
   }
 
+  textarea {
+    width: 30vw;
+    resize: none;
+    border-radius: 5px;
+    border: solid #E4E4E4 1px;
+  }
+
   .list_nav {
     margin: 0 auto;
     width: 75%;

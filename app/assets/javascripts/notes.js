@@ -1,4 +1,5 @@
 $(document).on('turbolinks:load', function () {
+  //フッダーの犬をクリックすると上にスライド
   $('.fa-dog').on('click', function () {
     $("html,body").animate({
       scrollTop: 0,

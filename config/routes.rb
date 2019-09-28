@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get "post" => "notes#post"
   get "user_index" => "notes#user_index"
   get "user_show" => "notes#user_show"
+  get "tweet_show" => "notes#tweet_show"
 end

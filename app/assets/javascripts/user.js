@@ -5,6 +5,6 @@ $(document).on('turbolinks:load', function () {
     $("#closed_passform").removeClass("hide")
   })
   $("#file_image").click(function () {
-    $("input[type='file']").trigger('click');
+    $("#file_image_input").trigger('click');
   });
 });

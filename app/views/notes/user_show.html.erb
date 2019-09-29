@@ -8,6 +8,8 @@
           <div class="name">
             <p>User_name</p>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-edit">編集</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal"
+              data-target="#myModal-add">MyDoggyを追加</button>
           </div>
           <div class="info">
             <div><i class="fas fa-heart fa-2x"></i>1200</div>
@@ -56,8 +58,83 @@
         </div>
       </div>
 
+
+      <div class="modal fade" id="myModal-add" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">MyDoggyを追加</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <i class="fas fa-image fa-2x" id="dog_image"></i>
+              <input type="file" id="dog_image_input" class="hide"></input>
+              <p>Doggyネーム</p>
+              <input placeholder="Doggy_name"></input>
+              <p>プロフィール</p>
+              <textarea rows="5" placeholder=""></textarea>
+              <p>犬種を選択</p>
+              <input placeholder="検索"></input>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+              <button type="button" class="btn btn-primary">追加</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
     <div class="main__posts container">
+      <div>
+        <h3>MyDoggy</h3>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-md-3">
+          <div class="card img-thumbnail">
+            <img class="card-img-top" src="/assets/pag.jpg" alt="画像">
+            <div class="card-body px-2 py-3">
+              <h5 class="card-title">Pag</h5>
+              <p class="card-text">８才♂</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="card img-thumbnail">
+            <img class="card-img-top" src="/assets/pag.jpg" alt="画像">
+            <div class="card-body px-2 py-3">
+              <h5 class="card-title">Pag</h5>
+              <p class="card-text">８才♂</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="card img-thumbnail">
+            <img class="card-img-top" src="/assets/pag.jpg" alt="画像">
+            <div class="card-body px-2 py-3">
+              <h5 class="card-title">Pag</h5>
+              <p class="card-text">８才♂</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="card img-thumbnail">
+            <img class="card-img-top" src="/assets/pag.jpg" alt="画像">
+            <div class="card-body px-2 py-3">
+              <h5 class="card-title">Pag</h5>
+              <p class="card-text">８才♂</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div>
+        <h3>投稿一覧</h3>
+      </div>
       <div class="row">
         <div class="col-sm-6 col-md-3">
           <a href="/tweet_show" class="card">

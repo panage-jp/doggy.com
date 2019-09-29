@@ -1,29 +1,81 @@
 <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+<%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+<div class="field">
+  <%= f.label :email %><br />
+  <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+</div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+<div class="field">
+  <%= f.label :password %>
+  <% if @minimum_password_length %>
+  <em>(<%= @minimum_password_length %> characters minimum)</em>
+  <% end %><br />
+  <%= f.password_field :password, autocomplete: "new-password" %>
+</div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+<div class="field">
+  <%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+</div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
+<div class="actions">
+  <%= f.submit "Sign up" %>
+</div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+
+<div class="usersSignin">
+  <div class="footer_modifier">
+    <div class="register-form">
+      <div class="input-form">
+        <img class="doggy_logo" src="/assets/sakamaki_logo_black3.png">
+        <div class="registration-form__message">
+          犬たちの「今」を残そう
+        </div>
+        <a class="btn btn-facebook_signin" href="#" role="button"><i class="fab fa-facebook-f"></i>Facebookでログイン</a>
+        <div class="mataha">
+          --------------------<span>または</span>--------------------
+        </div>
+        <%= form_with url: registration_path(resource_name) do |f| %>
+        <div class="form-group">
+          <%= f.text_field :email, class: "form-control", id: "exampleInputEmail1", autocomplete: "email", placeholder: "Emailアドレス"%>
+        </div>
+        <div class="form-group">
+          <%= f.text_field :user_name, class: "form-control", id: "exampleInputName", autocomplete: "email", placeholder: "ユーザーネーム"%>
+        </div>
+        <div class="form-group">
+
+          <%= f.password_field :password, autocomplete: "new-password",class: "form-control", id: "exampleInputPassword1", placeholder: "パスワード(6文字"%>
+        </div>
+        <div class="form-group">
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "パスワード(確認)", id:"exampleInputPassword2"%>
+        </div>
+
+        <%= f.submit "登録する",class: "btn btn-primary login"%>
+
+        <%end%>
+
+        <div class=confirmRegister>
+          登録することで、DOGGY.comの<span>利用規約、データに関するポリシー、Cookieポリシー</span>に同意するものとします。
+        </div>
+
+      </div>
+    </div>
+    <div class="change-form_register">
+      <p>
+        アカウントをお持ちですか？
+      </p>
+      <a href="#">
+        ログインする
+      </a>
+
+    </div>
+  </div>
+
+  <%= render partial: "footer"%>
+</div>

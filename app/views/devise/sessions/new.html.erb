@@ -3,7 +3,7 @@
     <div class="register-form">
       <div class="input-form">
         <img class="doggy_logo" src="/assets/sakamaki_logo_black3.png">
-        <%= form_with url: session_path(resource_name) do |f| %>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="form-group">
           <%= f.text_field :email, class: "form-control", id: "exampleInputEmail1", autocomplete: "email", placeholder: "Email"%>
         </div>

@@ -66,3 +66,4 @@ gem "bootstrap", ">= 4.3.1"
 gem 'font-awesome-sass', '~> 5.4.1'
 gem 'pry-rails'
 gem 'devise'
+gem 'mini_magick'

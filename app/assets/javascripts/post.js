@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function () {
+$(function () {
   //コメントの詳細表示
   $(".tuzuki").click(function (e) {
     e.preventDefault();

@@ -3,7 +3,11 @@
   <div class="main">
     <div class="main__title">
       <div class="main__title-content">
+        <%unless current_user.avatar%>
         <i class="fas fa-user-circle fa-8x"></i>
+        <%else%>
+        <%= image_tag current_user.avatar.variant(combine_options:{resize:"200x200^",crop:"200x200+0+0",gravity: :center}).processed, class: "avatar-large"%>
+        <%end%>
         <div class="main__title-content-profile">
           <div class="name">
             <p><%= @user.name%></p>
@@ -19,7 +23,7 @@
             <div><i class="fas fa-sticky-note fa-2x"></i>20</div>
           </div>
           <div class="selfintroduction">
-            犬犬犬犬犬犬犬犬犬犬
+            <%= current_user.introduction%>
           </div>
         </div>
       </div>
@@ -34,28 +38,36 @@
               </button>
             </div>
             <div class="modal-body">
+
+              <%= form_for(@user, url: user_registration_path, html: { method: :put }) do |f| %>
+              <%unless current_user.avatar%>
               <i class="fas fa-user-circle fa-3x"></i>
-              <i class="fas fa-image" id="file_image"></i>
-              <input type="file" id="file_image_input" class="hide"></input>
+              <%else%>
+              <%= image_tag current_user.avatar.variant(combine_options:{resize:"50x50^",crop:"50x50+0+0",gravity: :center}).processed, class: "avatar-large"%>
+              <%end%>
+              <i class="fas fa-image fa-lg" id="file_image"></i>
+              <%= f.file_field :avatar ,class: "hide", id: "file_image_input"%>
               <p>ユーザーネーム</p>
-              <input placeholder="User_name" value="User_name"></input>
+              <%= f.text_field :name, value: "#{current_user.name}", placeholder: "ユーザーネーム"%>
               <p>メールアドレス</p>
-              <input placeholder="Email" value="dog@dog"></input>
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", value: "#{current_user.email}"%>
               <p>一言プロフィール</p>
-              <textarea rows="5">犬犬犬犬犬犬犬犬犬犬</textarea>
+              <%= f.text_area :introduction, autocomplete: "text",value: "#{current_user.introduction}", rows: "5"%>
+              <p>現在のパスワード</p>
+              <%= f.password_field :current_password, autocomplete: "current-password" %>
               <br><a href="#" id="open_passform" class="">パスワードを変更する</a>
               <div class="hide" id="closed_passform">
                 <p>新しいパスワード</p>
-                <input type="password"></input>
+                <%= f.password_field :password, autocomplete: "new-password" %>
                 <p>新しいパスワード（確認）</p>
-                <input type="password"></input>
-                <p>現在のパスワード</p>
-                <input type="password"></input>
+                <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+
               </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
-              <button type="button" class="btn btn-primary">変更を保存</button>
+              <%= f.submit "変更を保存", class: "btn btn-primary"%>
+              <%end%>
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function () {
+$(function () {
   $('#open_passform').click(function (e) {
     e.preventDefault()
     $(this).addClass("hide")

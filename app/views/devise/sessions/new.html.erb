@@ -5,7 +5,7 @@
         <img class="doggy_logo" src="/assets/sakamaki_logo_black3.png">
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="form-group">
-          <%= f.text_field :email, class: "form-control", id: "exampleInputEmail1", autocomplete: "email", placeholder: "Email"%>
+          <%= f.text_field :email, class: "form-control", id: "exampleInputEmail1", placeholder: "Email"%>
         </div>
         <div class="form-group">
           <%= f.password_field :password, autocomplete: "current-password", class: "form-control", id: "exampleInputPassword1", placeholder: "password"%>

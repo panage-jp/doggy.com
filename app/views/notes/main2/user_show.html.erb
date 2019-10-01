@@ -1,4 +1,4 @@
-<%= render partial: "header"%>
+<%= render partial: "/modules/header"%>
 <div class="user_show grandPart">
   <div class="main">
     <div class="main__title">
@@ -16,7 +16,7 @@
             <div><i class="fas fa-sticky-note fa-2x"></i>20</div>
           </div>
           <div class="selfintroduction">
-            犬犬犬犬犬犬犬犬犬犬
+            <%= current_user.introduction%>
           </div>
         </div>
       </div>
@@ -257,4 +257,4 @@
 
 
 
-<%= render partial:"footer"%>
+<%= render partial:"/modules/footer"%>

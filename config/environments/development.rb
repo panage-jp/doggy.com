@@ -66,6 +66,7 @@ Rails.application.configure do
     Bullet.console = true # ブラウザのコンソールログに記録
     Bullet.rails_logger = true # Railsログに出力
   end
+  config.active_storage.service = :local
 end
 
 

@@ -3,10 +3,10 @@
   <div class="main">
     <div class="main__title">
       <div class="main__title-content">
-        <%unless current_user.avatar%>
-        <i class="fas fa-user-circle fa-8x"></i>
-        <%else%>
+        <%if current_user.avatar.attached?%>
         <%= image_tag current_user.avatar.variant(combine_options:{resize:"200x200^",crop:"200x200+0+0",gravity: :center}).processed, class: "avatar-large"%>
+        <%else%>
+        <i class="fas fa-user-circle fa-8x"></i>
         <%end%>
         <div class="main__title-content-profile">
           <div class="name">
@@ -40,7 +40,7 @@
             <div class="modal-body">
 
               <%= form_for(@user, url: user_registration_path, html: { method: :put }) do |f| %>
-              <%unless current_user.avatar%>
+              <%unless current_user.avatar.attached?%>
               <i class="fas fa-user-circle fa-3x"></i>
               <%else%>
               <%= image_tag current_user.avatar.variant(combine_options:{resize:"50x50^",crop:"50x50+0+0",gravity: :center}).processed, class: "avatar-large"%>

@@ -7,18 +7,26 @@
       </div>
 
       <div class="post_row_left col-xs-12 col-sm-12 col-md-2 ">
+        <%if current_user%>
         <div class="post__user">
+
+          <%unless current_user.avatar.attached?%>
           <i class="fas fa-user-circle fa-3x"></i>
+          <%else%>
+          <%= image_tag current_user.avatar.variant(combine_options:{resize:"50x50^",crop:"50x50+0+0",gravity: :center}).processed, class: "avatar-large"%>
+          <%end%>
+
           <div class="post__user-name">
-            <p class="post__user-name_user">User_name</p>
+            <p class="post__user-name_user"><%=current_user.name%></p>
             <p class="post__user-name_dog">Dog_name</p>
           </div>
 
         </div>
+        <%end%>
         <div class="post__pickedUser">
           <div class="post__pickedUser-title">
             <p class="osusume">おすすめ</p>
-            <a href="/user_index" class="subete">すべて見る</a>
+            <a href="/users" class="subete">すべて見る</a>
           </div>
           <div class="post__pickedUser-user">
             <i class="fas fa-user-circle fa-2x"></i>

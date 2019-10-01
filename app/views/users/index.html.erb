@@ -1,0 +1,42 @@
+<%= render partial: "/modules/header"%>
+<div class="user_index grandPart">
+  <div class="container-fluid">
+    <div class="row user_index__row">
+      <div class="col-xs-12 col-sm-12 col-md-4">
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 main">
+        <div class="main__title">
+          ユーザー
+        </div>
+        <div class="main__serchbox">
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="検索">
+        </div>
+        <div class="main__users">
+
+          <% @users.each do |user|%>
+          <div class="main__users-user">
+            <%unless user.avatar.attached?%>
+            <i class="fas fa-user-circle fa-3x"></i>
+            <%else%>
+            <%= image_tag user.avatar.variant(combine_options:{resize:"50x50^",crop:"50x50+0+0",gravity: :center}).processed, class: "avatar-large"%>
+            <%end%>
+            <div class="main__users-user-name">
+              <%= link_to user.name, user_path(user.id), class: "user_name"%>
+              <div class="dog_name" href="#">Dog_name</div>
+            </div>
+          </div>
+          <%end%>
+          <div class="main__users-user">
+            <i class="fas fa-user-circle fa-3x"></i>
+            <div class="main__users-user-name">
+              <a class="user_name" href="#">User_name</a>
+              <div class="dog_name" href="#">Dog_name</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

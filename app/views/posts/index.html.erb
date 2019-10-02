@@ -24,30 +24,44 @@
         </div>
         <%end%>
         <div class="post__pickedUser">
+
           <div class="post__pickedUser-title">
             <p class="osusume">おすすめ</p>
             <a href="/users" class="subete">すべて見る</a>
           </div>
+
           <div class="post__pickedUser-user">
+            <%unless @users[0].avatar.attached?%>
             <i class="fas fa-user-circle fa-2x"></i>
-            <a class="user_name" href="#">User_name</a>
+            <%else%>
+            <%= image_tag @users[0].avatar.variant(combine_options:{resize:"32x32^",crop:"32x32+0+0",gravity: :center}).processed, class: "avatar-large"%>
+            <%end%>
+            <%=link_to "#{@users[0].name}",user_path(@users[0].id),class: "user_name"%>
+          </div>
+
+          <div class="post__pickedUser-user">
+            <%unless @users[1].avatar.attached?%>
+            <i class="fas fa-user-circle fa-2x"></i>
+            <%else%>
+            <%= image_tag @users[1].avatar.variant(combine_options:{resize:"32x32^",crop:"32x32+0+0",gravity: :center}).processed, class: "avatar-large"%>
+            <%end%>
+            <%=link_to "#{@users[1].name}",user_path(@users[1].id),class: "user_name"%>
           </div>
           <div class="post__pickedUser-user">
+            <%unless @users[2].avatar.attached?%>
             <i class="fas fa-user-circle fa-2x"></i>
-            <a class="user_name" href="#">User_name</a>
-          </div>
-          <div class="post__pickedUser-user">
-            <i class="fas fa-user-circle fa-2x"></i>
-            <a class="user_name" href="#">User_name</a>
+            <%else%>
+            <%= image_tag @users[2].avatar.variant(combine_options:{resize:"32x32^",crop:"32x32+0+0",gravity: :center}).processed, class: "avatar-large"%>
+            <%end%>
+            <%=link_to "#{@users[2].name}",user_path(@users[2].id),class: "user_name"%>
           </div>
 
         </div>
       </div>
       <div class="post_row_right col-xs-12 col-sm-6 ">
-        <%= render partial:"postContent", locals: {id: "1"}%>
-        <%= render partial:"postContent", locals: {id: "2"}%>
-        <%= render partial:"postContent", locals: {id: "3"}%>
-        <%= render partial:"postContent", locals: {id: "4"}%>
+        <%@posts.each_with_index do |post,id|%>
+        <%= render partial: "postContent", locals: {id: id, post: post}%>
+        <%end%>
       </div>
 
     </div>

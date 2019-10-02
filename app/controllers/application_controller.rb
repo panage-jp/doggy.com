@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :set_post
 
   protected
 
@@ -9,5 +10,9 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update, keys: [:name])
     devise_parameter_sanitizer.permit(:account_update, keys: [:introduction])
     devise_parameter_sanitizer.permit(:account_update, keys: [:avatar])
+  end
+
+  def set_post
+    @post = Post.new
   end
 end

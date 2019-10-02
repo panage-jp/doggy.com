@@ -4,7 +4,7 @@
     <div class="main__title">
       <div class="main__title-content">
         <%if current_user.avatar.attached?%>
-        <%= image_tag current_user.avatar.variant(combine_options:{resize:"200x200^",crop:"200x200+0+0",gravity: :center}).processed, class: "avatar-large"%>
+        <%= image_tag @user.avatar.variant(combine_options:{resize:"200x200^",crop:"200x200+0+0",gravity: :center}).processed, class: "avatar-large"%>
         <%else%>
         <i class="fas fa-user-circle fa-8x"></i>
         <%end%>
@@ -20,10 +20,10 @@
 
           <div class="info">
             <div><i class="fas fa-heart fa-2x"></i>1200</div>
-            <div><i class="fas fa-sticky-note fa-2x"></i>20</div>
+            <div><i class="fas fa-sticky-note fa-2x"></i> <%=@user.posts.length%></div>
           </div>
           <div class="selfintroduction">
-            <%= current_user.introduction%>
+            <%= simple_format(current_user.introduction)%>
           </div>
         </div>
       </div>
@@ -151,122 +151,20 @@
         <h3>投稿一覧</h3>
       </div>
       <div class="row">
-        <div class="col-sm-6 col-md-3">
-          <a href="/tweet_show" class="card">
-            <img class="card-img" src="/assets/pag.jpg" alt="pag">
-          </a>
+        <%@posts.each do |post|%>
+        <div class="col-sm-6 col-md-3 post-image">
+          <%= link_to(post_path(post.id), class: "card") do %>
+          <%=image_tag(post.images[0].variant(combine_options:{resize:"253x253^",crop:"253x253+0+0",gravity: :center}).processed,class: "card-img")%>
+          <%end%>
         </div>
-        <div class="col-sm-6 col-md-3">
-          <a href="/tweet_show" class="card">
-            <img class="card-img" src="/assets/pag.jpg" alt="pag">
-          </a>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <a href="/tweet_show" class="card">
-            <img class="card-img" src="/assets/pag.jpg" alt="pag">
-          </a>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <a href="/tweet_show" class="card">
-            <img class="card-img" src="/assets/pag.jpg" alt="pag">
-          </a>
-        </div>
+        <%end%>
+
 
       </div>
-      <div class="row">
-        <div class="col-sm-6 col-md-3">
-          <a href="/tweet_show" class="card">
-            <img class="card-img" src="/assets/pag.jpg" alt="pag">
-          </a>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <a href="/tweet_show" class="card">
-            <img class="card-img" src="/assets/pag.jpg" alt="pag">
-          </a>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <a href="/tweet_show" class="card">
-            <img class="card-img" src="/assets/pag.jpg" alt="pag">
-          </a>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <a href="/tweet_show" class="card">
-            <img class="card-img" src="/assets/pag.jpg" alt="pag">
-          </a>
-        </div>
 
-      </div>
-      <div class="row">
-        <div class="col-sm-6 col-md-3">
-          <a href="/tweet_show" class="card">
-            <img class="card-img" src="/assets/pag.jpg" alt="pag">
-          </a>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <a href="/tweet_show" class="card">
-            <img class="card-img" src="/assets/pag.jpg" alt="pag">
-          </a>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <a href="/tweet_show" class="card">
-            <img class="card-img" src="/assets/pag.jpg" alt="pag">
-          </a>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <a href="/tweet_show" class="card">
-            <img class="card-img" src="/assets/pag.jpg" alt="pag">
-          </a>
-        </div>
-
-      </div>
-      <div class="row">
-        <div class="col-sm-6 col-md-3">
-          <a href="/tweet_show" class="card">
-            <img class="card-img" src="/assets/pag.jpg" alt="pag">
-          </a>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <a href="/tweet_show" class="card">
-            <img class="card-img" src="/assets/pag.jpg" alt="pag">
-          </a>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <a href="/tweet_show" class="card">
-            <img class="card-img" src="/assets/pag.jpg" alt="pag">
-          </a>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <a href="/tweet_show" class="card">
-            <img class="card-img" src="/assets/pag.jpg" alt="pag">
-          </a>
-        </div>
-
-      </div>
-      <div class="row">
-        <div class="col-sm-6 col-md-3">
-          <a href="/tweet_show" class="card">
-            <img class="card-img" src="/assets/pag.jpg" alt="pag">
-          </a>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <a href="/tweet_show" class="card">
-            <img class="card-img" src="/assets/pag.jpg" alt="pag">
-          </a>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <a href="/tweet_show" class="card">
-            <img class="card-img" src="/assets/pag.jpg" alt="pag">
-          </a>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <a href="/tweet_show" class="card">
-            <img class="card-img" src="/assets/pag.jpg" alt="pag">
-          </a>
-        </div>
-
-      </div>
     </div>
   </div>
+</div>
 
 </div>
 

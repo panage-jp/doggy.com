@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root "notes#index"
   resources :notes, only: [:index]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :posts, only: [:index, :create, :delete]
+  resources :posts
   resources :users, :only => [:show,:index]
   get "signin" => "notes#signin"
   get "login" => "notes#login"

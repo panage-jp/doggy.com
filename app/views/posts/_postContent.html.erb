@@ -32,7 +32,7 @@
           <%end%>
           <%end%>
         </div>
-
+        <%if post.images.length >= 2%>
         <a class="carousel-control-prev" href="#carouselExampleControls<%=id%>" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">前へ</span>
@@ -41,6 +41,7 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">次へ</span>
         </a>
+        <%end%>
       </div>
     </div>
     <div class="post__maincontent-posts-icons">
@@ -92,7 +93,7 @@
           <%end%>
           <%end%>
         </div>
-
+        <%if post.images.length >= 2%>
         <a class="carousel-control-prev" href="#carouselExampleControls<%=id%>h" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">前へ</span>
@@ -101,6 +102,7 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">次へ</span>
         </a>
+        <%end%>
       </div>
     </div>
     <div class="post__maincontent-posts-icons">

@@ -99,7 +99,7 @@
             <div class="modal-body">
               <%=f.text_area :text, rows: "8", placeholder: "テキスト"%>
               <div>
-                <input placeholder="#タグを追加"></input>
+                <%=f.text_field :tag_list, placeholder: "#タグを追加", "data-role" => "tagsinput"%>
               </div>
               <div class="posted_images">
               </div>
@@ -118,7 +118,6 @@
         </div>
       </div>
       <%end%>
-
 
 
 

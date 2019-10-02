@@ -67,4 +67,6 @@ gem 'font-awesome-sass', '~> 5.4.1'
 gem 'pry-rails'
 gem 'devise'
 gem 'mini_magick'
-gem 'acts-as-taggable-on', '~> 6.0'
+
+#タグ機能追加のため
+gem 'acts-as-taggable-on', '~> 6.0' 

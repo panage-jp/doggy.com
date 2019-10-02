@@ -59,7 +59,10 @@
           <div class="post__maincontent-posts-text">
             <%=simple_format(@post_show.text)%>
             <div class="post__maincontent-posts-hash">
-              <a href="#">#パグ </a><a href="#">#パグ</a> <a href="#">#パグ</a> <a href="#">#パグ</a>
+              <%@post_show.tags.each do |tag|%>
+              <a href="#">#<%=tag%></a>
+              <%end%>
+
             </div>
           </div>
           <div class="post__maincontent-posts-comments">

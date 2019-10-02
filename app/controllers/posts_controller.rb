@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.includes(:user).with_attached_images.order(id: "DESC")
+    @posts = Post.includes(:tags).includes(:user).with_attached_images.order(id: "DESC")
     @users = User.all.with_attached_avatar
   end
 
@@ -27,7 +27,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    post_params_result=params.require(:post).permit(:text,images: [],:tag_list).merge(user_id: current_user.id)
+    post_params_result=params.require(:post).permit(:tag_list,:text,images: []).merge(user_id: current_user.id)
     if post_params_result[:images].length > 4
       return nil
     else

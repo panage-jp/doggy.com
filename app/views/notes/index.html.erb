@@ -157,7 +157,7 @@
             <%= image_tag @users[0].avatar.variant(combine_options:{resize:"260x260^",crop:"260x260+0+0",gravity: :center}).processed %>
             <div class="card-body px-2 py-3">
               <h5 class="card-title">@<%=@users[0].name%></h5>
-              <p class="card-text"><%=@users[0].introduction%></p>
+              <p class="card-text"><%=simple_format(@users[0].introduction)%></p>
             </div>
           </div>
           <%end%>
@@ -168,7 +168,7 @@
             <%= image_tag @users[1].avatar.variant(combine_options:{resize:"260x260^",crop:"260x260+0+0",gravity: :center}).processed %>
             <div class="card-body px-2 py-3">
               <h5 class="card-title">@<%=@users[1].name%></h5>
-              <p class="card-text"><%=@users[1].introduction%></p>
+              <p class="card-text"><%=simple_format(@users[1].introduction)%></p>
             </div>
           </div>
           <%end%>
@@ -179,7 +179,7 @@
             <%= image_tag @users[2].avatar.variant(combine_options:{resize:"260x260^",crop:"260x260+0+0",gravity: :center}).processed %>
             <div class="card-body px-2 py-3">
               <h5 class="card-title">@<%=@users[2].name%></h5>
-              <p class="card-text"><%=@users[2].introduction%></p>
+              <p class="card-text"><%=simple_format(@users[2].introduction)%></p>
             </div>
           </div>
           <%end%>

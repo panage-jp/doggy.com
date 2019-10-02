@@ -68,7 +68,9 @@
     z-index: 3;
   }
 
-
+  .badge-info {
+    background-color: #1877f2;
+  }
 
   .modal-title {
     color: #0b2345;
@@ -98,10 +100,9 @@
   }
 
   input {
-    width: 30vw;
     border-radius: 5px;
-    border: solid #E4E4E4 1px;
-    margin-bottom: 5px;
+    border: none;
+    width: 26%;
   }
 
   .list_nav {

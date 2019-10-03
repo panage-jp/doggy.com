@@ -83,21 +83,23 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
+            <%=form_for(@dog, url: dogs_path) do |f|%>
             <div class="modal-body">
               <i class="fas fa-image fa-2x" id="dog_image"></i>
-              <input type="file" id="dog_image_input" class="hide"></input>
+              <%= f.file_field :avatar ,class: "hide", id: "dog_image_input",%>
               <p>Doggyネーム</p>
-              <input placeholder="Doggy_name"></input>
+              <%= f.text_field :name, placeholder: "Doggy_name"%>
               <p>プロフィール</p>
-              <textarea rows="5" placeholder=""></textarea>
+              <%= f.text_area :profile, rows: 5, placeholder: "140文字まで"%>
               <p>犬種を選択</p>
               <input placeholder="検索"></input>
-
             </div>
+
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
-              <button type="button" class="btn btn-primary">追加</button>
+              <%= f.submit "追加", class: "btn btn-primary"%>
             </div>
+            <%end%>
           </div>
         </div>
       </div>
@@ -109,13 +111,18 @@
       </div>
       <div class="row">
         <div class="col-sm-6 col-md-3">
+          <%@user.dogs.each do |dog|%>
+
           <div class="card img-thumbnail">
-            <img class="card-img-top" src="/assets/pag.jpg" alt="画像">
+            <%if dog.avatar.attached?%>
+            <%= image_tag dog.avatar.variant(resize:'245x245').processed, class: "card-img-top" %>
+            <%end%>
             <div class="card-body px-2 py-3">
-              <h5 class="card-title">Pag</h5>
-              <p class="card-text">８才♂</p>
+              <h5 class="card-title"><%=dog.name%></h5>
+              <p class="card-text"><%=simple_format(dog.profile)%></p>
             </div>
           </div>
+          <%end%>
         </div>
         <div class="col-sm-6 col-md-3">
           <div class="card img-thumbnail">

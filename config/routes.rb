@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'dogs/new'
   get 'posts/index'
   devise_for :users, controllers: {   registrations: 'users/registrations',
                                     sessions: 'users/sessions' }
@@ -7,6 +8,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :posts
   resources :users, :only => [:show,:index]
+  resources :dogs, :only => [:create]
   get "signin" => "notes#signin"
   get "login" => "notes#login"
   get "post" => "notes#post"

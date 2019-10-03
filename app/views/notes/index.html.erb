@@ -35,113 +35,149 @@
       <em class="h1">Pickup Dogs</em>
     </div>
 
-    <div class="row">
+    <div class="row under_line">
       <div class="col-xs-0 col-sm-2 col-md-2">
       </div>
 
       <div class="col-xs-6 col-sm-2 col-md-2">
         <a href="#" class="card picked_dog">
-          <img class="card-img" src="/assets/love.png" alt="picked_up_dog">
+          <%if @dogs[0].avatar.attached?%>
+
+          <%= image_tag @dogs[0].avatar.variant(combine_options:{resize:"200x200^",crop:"200x200+0+0",gravity: :center}).processed%>
+          <%else%>
+          <%= image_tag("/assets/dog.jpeg", :size => "200x200") %>
+          <%end%>
 
           <div class="card-img-overlay hide">
             <img class="arrow_icon" src="assets/arrow_icon.png">
-            <h5 class="card-title">User_name</h5>
-            <p class="card-text"></p>
-            <p class="card-text"><small>Dog_name</small></p>
+            <h5 class="card-title">@<%=@dogs[0].user.name%></h5>
+            <p class="card-text"><small><%=@dogs[0].name%></small></p>
           </div>
         </a>
       </div>
 
       <div class="col-xs-6 col-sm-2 col-md-2">
         <a href="#" class="card picked_dog">
-          <img class="card-img" src="/assets/love.png" alt="picked_up_dog">
+          <%if @dogs[1].avatar.attached?%>
+
+          <%= image_tag @dogs[1].avatar.variant(combine_options:{resize:"200x200^",crop:"200x200+0+0",gravity: :center}).processed%>
+          <%else%>
+          <%= image_tag("/assets/dog.jpeg", :size => "200x200") %>
+          <%end%>
+
           <div class="card-img-overlay hide">
-            <img src="assets/arrow_icon.png" class="arrow_icon">
-            <h5 class="card-title">User_name</h5>
-            <p class="card-text"></p>
-            <p class="card-text"><small>Dog_name</small></p>
+            <img class="arrow_icon" src="assets/arrow_icon.png">
+            <h5 class="card-title">@<%=@dogs[1].user.name%></h5>
+            <p class="card-text"><small><%=@dogs[1].name%></small></p>
           </div>
         </a>
       </div>
 
       <div class="col-xs-6 col-sm-2 col-md-2">
         <a href="#" class="card picked_dog">
-          <img class="card-img" src="/assets/love.png" alt="picked_up_dog">
+          <%if @dogs[2].avatar.attached?%>
+
+          <%= image_tag @dogs[2].avatar.variant(combine_options:{resize:"200x200^",crop:"200x200+0+0",gravity: :center}).processed%>
+          <%else%>
+          <%= image_tag("/assets/dog.jpeg", :size => "200x200") %>
+          <%end%>
+
           <div class="card-img-overlay hide">
-            <img src="assets/arrow_icon.png" class="arrow_icon">
-            <h5 class="card-title">User_name</h5>
-            <p class="card-text"></p>
-            <p class="card-text"><small>Dog_name</small></p>
+            <img class="arrow_icon" src="assets/arrow_icon.png">
+            <h5 class="card-title">@<%=@dogs[2].user.name%></h5>
+            <p class="card-text"><small><%=@dogs[2].name%></small></p>
           </div>
         </a>
       </div>
 
       <div class="col-xs-6 col-sm-2 col-md-2">
         <a href="#" class="card picked_dog">
-          <img class="card-img" src="/assets/love.png" alt="picked_up_dog">
+          <%if @dogs[3].avatar.attached?%>
+
+          <%= image_tag @dogs[3].avatar.variant(combine_options:{resize:"200x200^",crop:"200x200+0+0",gravity: :center}).processed%>
+          <%else%>
+          <%= image_tag("/assets/dog.jpeg", :size => "200x200") %>
+          <%end%>
+
           <div class="card-img-overlay hide">
-            <img src="assets/arrow_icon.png" class="arrow_icon">
-            <h5 class="card-title">User_name</h5>
-            <p class="card-text"></p>
-            <p class="card-text"><small>Dog_name</small></p>
+            <img class="arrow_icon" src="assets/arrow_icon.png">
+            <h5 class="card-title">@<%=@dogs[3].user.name%></h5>
+            <p class="card-text"><small><%=@dogs[3].name%></small></p>
           </div>
         </a>
-
       </div>
 
-    </div>
 
-    <div class="row under_line">
+      <div class="col-xs-2 col-sm-2 col-md-2">
+      </div>
       <div class="col-xs-2 col-sm-2 col-md-2">
       </div>
 
-      <div class="col-xs-2 col-sm-2 col-md-2">
+      <div class="col-xs-6 col-sm-2 col-md-2">
         <a href="#" class="card picked_dog">
-          <img class="card-img" src="/assets/love.png" alt="picked_up_dog">
+          <%if @dogs[4].avatar.attached?%>
+
+          <%= image_tag @dogs[4].avatar.variant(combine_options:{resize:"200x200^",crop:"200x200+0+0",gravity: :center}).processed%>
+          <%else%>
+          <%= image_tag("/assets/dog.jpeg", :size => "200x200") %>
+          <%end%>
+
           <div class="card-img-overlay hide">
-            <img src="assets/arrow_icon.png" class="arrow_icon">
-            <h5 class="card-title">User_name</h5>
-            <p class="card-text"></p>
-            <p class="card-text"><small>Dog_name</small></p>
+            <img class="arrow_icon" src="assets/arrow_icon.png">
+            <h5 class="card-title">@<%=@dogs[4].user.name%></h5>
+            <p class="card-text"><small><%=@dogs[4].name%></small></p>
           </div>
         </a>
-
       </div>
-      <div class="col-xs-2 col-sm-2 col-md-2">
+
+      <div class="col-xs-6 col-sm-2 col-md-2">
         <a href="#" class="card picked_dog">
-          <img class="card-img" src="/assets/love.png" alt="picked_up_dog">
+          <%if @dogs[5].avatar.attached?%>
+
+          <%= image_tag @dogs[5].avatar.variant(combine_options:{resize:"200x200^",crop:"200x200+0+0",gravity: :center}).processed%>
+          <%else%>
+          <%= image_tag("/assets/dog.jpeg", :size => "200x200") %>
+          <%end%>
+
           <div class="card-img-overlay hide">
-            <img src="assets/arrow_icon.png" class="arrow_icon">
-            <h5 class="card-title">User_name</h5>
-            <p class="card-text"></p>
-            <p class="card-text"><small>Dog_name</small></p>
+            <img class="arrow_icon" src="assets/arrow_icon.png">
+            <h5 class="card-title">@<%=@dogs[5].user.name%></h5>
+            <p class="card-text"><small><%=@dogs[5].name%></small></p>
           </div>
         </a>
-
       </div>
-      <div class="col-xs-2 col-sm-2 col-md-2">
+
+      <div class="col-xs-6 col-sm-2 col-md-2">
         <a href="#" class="card picked_dog">
-          <img class="card-img" src="/assets/love.png" alt="picked_up_dog">
+          <%if @dogs[6].avatar.attached?%>
+
+          <%= image_tag @dogs[6].avatar.variant(combine_options:{resize:"200x200^",crop:"200x200+0+0",gravity: :center}).processed%>
+          <%else%>
+          <%= image_tag("/assets/dog.jpeg", :size => "200x200") %>
+          <%end%>
+
           <div class="card-img-overlay hide">
-            <img src="assets/arrow_icon.png" class="arrow_icon">
-            <h5 class="card-title">User_name</h5>
-            <p class="card-text"></p>
-            <p class="card-text"><small>Dog_name</small></p>
+            <img class="arrow_icon" src="assets/arrow_icon.png">
+            <h5 class="card-title">@<%=@dogs[6].user.name%></h5>
+            <p class="card-text"><small><%=@dogs[6].name%></small></p>
           </div>
         </a>
-
       </div>
-      <div class="col-xs-2 col-sm-2 col-md-2">
+      <div class="col-xs-6 col-sm-2 col-md-2">
         <a href="#" class="card picked_dog">
-          <img class="card-img" src="/assets/love.png" alt="picked_up_dog">
+          <%if @dogs[7].avatar.attached?%>
+
+          <%= image_tag @dogs[7].avatar.variant(combine_options:{resize:"200x200^",crop:"200x200+0+0",gravity: :center}).processed%>
+          <%else%>
+          <%= image_tag("/assets/dog.jpeg", :size => "200x200") %>
+          <%end%>
+
           <div class="card-img-overlay hide">
-            <img src="assets/arrow_icon.png" class="arrow_icon">
-            <h5 class="card-title">User_name</h5>
-            <p class="card-text"></p>
-            <p class="card-text"><small>Dog_name</small></p>
+            <img class="arrow_icon" src="assets/arrow_icon.png">
+            <h5 class="card-title">@<%=@dogs[7].user.name%></h5>
+            <p class="card-text"><small><%=@dogs[7].name%></small></p>
           </div>
         </a>
-
       </div>
 
     </div>

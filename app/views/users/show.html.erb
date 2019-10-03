@@ -86,7 +86,7 @@
             <%=form_for(@dog, url: dogs_path) do |f|%>
             <div class="modal-body">
               <i class="fas fa-image fa-2x" id="dog_image"></i>
-              <%= f.file_field :avatar ,class: "hide", id: "dog_image_input",%>
+              <%= f.file_field :avatar ,class: "hide", id: "dog_image_input"%>
               <p>Doggyネーム</p>
               <%= f.text_field :name, placeholder: "Doggy_name"%>
               <p>プロフィール</p>
@@ -110,48 +110,25 @@
         <h3>MyDoggy</h3>
       </div>
       <div class="row">
+        <%@dogs.each do |dog|%>
         <div class="col-sm-6 col-md-3">
-          <%@user.dogs.each do |dog|%>
+
 
           <div class="card img-thumbnail">
             <%if dog.avatar.attached?%>
-            <%= image_tag dog.avatar.variant(resize:'245x245').processed, class: "card-img-top" %>
+
+            <%= image_tag dog.avatar.variant(combine_options:{resize:"245x200^",crop:"245x200+0+0",gravity: :center}).processed%>
+            <%else%>
+            <%= image_tag("/assets/dog.jpeg", :size => "245x200") %>
             <%end%>
             <div class="card-body px-2 py-3">
               <h5 class="card-title"><%=dog.name%></h5>
               <p class="card-text"><%=simple_format(dog.profile)%></p>
             </div>
           </div>
-          <%end%>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <div class="card img-thumbnail">
-            <img class="card-img-top" src="/assets/pag.jpg" alt="画像">
-            <div class="card-body px-2 py-3">
-              <h5 class="card-title">Pag</h5>
-              <p class="card-text">８才♂</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <div class="card img-thumbnail">
-            <img class="card-img-top" src="/assets/pag.jpg" alt="画像">
-            <div class="card-body px-2 py-3">
-              <h5 class="card-title">Pag</h5>
-              <p class="card-text">８才♂</p>
 
-            </div>
-          </div>
         </div>
-        <div class="col-sm-6 col-md-3">
-          <div class="card img-thumbnail">
-            <img class="card-img-top" src="/assets/pag.jpg" alt="画像">
-            <div class="card-body px-2 py-3">
-              <h5 class="card-title">Pag</h5>
-              <p class="card-text">８才♂</p>
-            </div>
-          </div>
-        </div>
+        <%end%>
 
       </div>
       <div>
@@ -172,9 +149,4 @@
     </div>
   </div>
 </div>
-
-</div>
-
-
-
 <%= render partial:"/modules/footer"%>

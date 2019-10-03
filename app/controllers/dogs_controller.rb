@@ -1,6 +1,5 @@
 class DogsController < ApplicationController
   def create
-    binding.pry
     dog = Dog.new(dog_params)
     dog.save
     if dog.save

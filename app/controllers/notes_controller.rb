@@ -5,6 +5,7 @@ class NotesController < ApplicationController
   # GET /notes.json
   def index
     @users = User.with_attached_avatar
+    @dogs = Dog.eager_load(:user).all.with_attached_avatar
   end
 
   # GET /notes/1

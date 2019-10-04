@@ -1,0 +1,119 @@
+<%= render partial: "/modules/header"%>
+<div class="post grandPart">
+  <div class="container-fluid post__mainContent">
+    <div class="row post_row ">
+
+      <div class="post_row_left col-xs-12 col-sm-12 col-md-3 ">
+      </div>
+
+      <div class="post_row_right col-xs-12 col-sm-6 ">
+
+        <div class="post__maincontent-posts">
+          <div class="post__maincontent-posts-title">
+            <%unless @post_show.user.avatar.attached?%>
+            <i class="fas fa-user-circle fa-2x"></i>
+            <%else%>
+            <%= image_tag current_user.avatar.variant(combine_options:{resize:"32x32^",crop:"32x32+0+0",gravity: :center}).processed, class: "avatar-large"%>
+            <%end%>
+            <%=link_to "#{@post_show.user.name}", user_path(@post_show.user.id), class: "user_name"%>
+            <div class="fas-modifier">
+              <a href="#" role="button" id="dropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink1">
+                <%=link_to "詳細", post_path(@post_show.id), class: "dropdown-item"%>
+                <%=link_to "削除", "/posts/#{@post_show.id}", class: "dropdown-item",method: :delete%>
+              </div>
+            </div>
+          </div>
+          <div class="post__maincontent-posts-image">
+            <div id="carouselExampleControls1h" class="carousel slide">
+
+              <div class="carousel-inner">
+                <%@post_show.images.each_with_index do |image,index|%>
+                <%if index == 0%>
+                <div class="carousel-item active">
+                  <%=image_tag(image,class: "d-block w-100")%>
+                </div>
+                <%else%>
+                <div class="carousel-item">
+                  <%=image_tag(image,class: "d-block w-100")%>
+                </div>
+                <%end%>
+                <%end%>
+              </div>
+
+              <a class="carousel-control-prev" href="#carouselExampleControls1h" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">前へ</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleControls1h" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">次へ</span>
+              </a>
+            </div>
+          </div>
+          <div class="post__maincontent-posts-icons">
+            <a href="#" class="post__maincontent-posts-icons-a"><i class="far fa-heart fa-2x"></i></a><span>12</span>
+            <a href="#" class="post__maincontent-posts-icons-a"><i class="far fa-comment fa-2x"></i></a><span>12</span>
+          </div>
+          <div class="post__maincontent-posts-text">
+            <%=simple_format(@post_show.text)%>
+            <div class="post__maincontent-posts-hash">
+              <%@post_show.tags.each do |tag|%>
+              <a href="#">#<%=tag%></a>
+              <%end%>
+
+            </div>
+          </div>
+          <div class="post__maincontent-posts-comments">
+            <div class="post__maincontent-posts-comments-comment">
+              <div class="post__maincontent-posts-comments-comment-user">
+                <i class="fas fa-user-circle fa-2x"></i>
+                <a class="user_name" href="#">User_name</a>
+              </div>
+              <div class="post__maincontent-posts-comments-comment-text">
+                かわいい
+              </div>
+            </div>
+            <div class="post__maincontent-posts-comments-comment">
+              <div class="post__maincontent-posts-comments-comment-user">
+                <i class="fas fa-user-circle fa-2x"></i>
+                <a class="user_name" href="#">User_name</a>
+              </div>
+              <div class="post__maincontent-posts-comments-comment-text">
+                かわいい
+              </div>
+            </div>
+            <div class="post__maincontent-posts-comments-comment">
+              <div class="post__maincontent-posts-comments-comment-user">
+                <i class="fas fa-user-circle fa-2x"></i>
+                <a class="user_name" href="#">User_name</a>
+              </div>
+              <div class="post__maincontent-posts-comments-comment-text">
+                かわいい
+              </div>
+            </div>
+            <div class="post__maincontent-posts-comments-comment">
+              <div class="post__maincontent-posts-comments-comment-user">
+                <i class="fas fa-user-circle fa-2x"></i>
+                <a class="user_name" href="#">User_name</a>
+              </div>
+              <div class="post__maincontent-posts-comments-comment-text">
+                かわいい
+              </div>
+            </div>
+          </div>
+          <div class="post__maincontent-posts-commentform">
+            <input placeholder="コメントを入力...."></input>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<%= render partial: "/modules/footer"%>

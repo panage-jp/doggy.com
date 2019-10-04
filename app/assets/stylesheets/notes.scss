@@ -31,14 +31,26 @@
 
 .main1 {
 
+  .picked_dog {
+    display: inline-block;
+    margin-bottom: 30px;
+  }
 
   .card-img-overlay {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.5);
     color: black;
 
     .arrow_icon {
       padding-left: 43px;
       padding-top: 40px;
+    }
+
+    .card-title {
+      margin-bottom: 0px;
+    }
+
+    p {
+      padding-left: 15px;
     }
   }
 

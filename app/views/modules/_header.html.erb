@@ -95,27 +95,29 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
+            <%=form_for @post do |f|%>
             <div class="modal-body">
-              <textarea rows="8" placeholder="テキスト"></textarea>
+              <%=f.text_area :text, rows: "8", placeholder: "テキスト"%>
               <div>
-                <input placeholder="#タグを追加"></input>
+                <%=f.text_field :tag_list, placeholder: "#タグを追加", "data-role" => "tagsinput"%>
               </div>
               <div class="posted_images">
               </div>
               <div class="post__form-image">
                 <button type="button" class="btn btn-light" id="image_post">画像を追加</button>
-                <input type="file" name="image_file[]" multiple="multiple" id="image_post_input" class="hide"></input>
+                <%= f.file_field :images ,class: "hide", id: "image_post_input", multiple: true%>
                 <button type="button" class="btn btn-light">MyDoggyを選択</button>
               </div>
+
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-primary">投稿する</button>
+              <%= f.submit "投稿する", class: "btn btn-primary"%>
             </div>
+            <%end%>
           </div>
         </div>
       </div>
       <%end%>
-
 
 
 

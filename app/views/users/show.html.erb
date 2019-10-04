@@ -122,7 +122,13 @@
             <%= image_tag("/assets/dog.jpeg", :size => "245x200") %>
             <%end%>
             <div class="card-body px-2 py-3">
-              <h5 class="card-title"><%=dog.name%></h5>
+              <h5 class="card-title"><%=dog.name%>
+                <i class="fas fa-cog " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <%=link_to "詳細", dog_path(dog.id), class: "dropdown-item"%>
+                  <%=link_to "削除","/dogs/#{dog.id}" , class: "dropdown-item",method: :delete%>
+                </div>
+              </h5>
               <p class="card-text"><%=simple_format(dog.profile)%></p>
             </div>
           </div>

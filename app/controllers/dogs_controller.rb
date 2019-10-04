@@ -3,11 +3,18 @@ class DogsController < ApplicationController
     dog = Dog.new(dog_params)
     dog.save
     if dog.save
-      redirect_to posts_path
+      redirect_to user_path(current_user.id)
     else
       redirect_to root_path
     end
   end
+
+  def destroy
+    dog = Dog.find(params[:id])
+    dog.destroy
+    redirect_to user_path(current_user.id)
+  end
+
 
   private
 

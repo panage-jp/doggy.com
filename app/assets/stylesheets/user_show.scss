@@ -70,6 +70,18 @@
         text-align: center;
         padding-bottom: 5px;
       }
+
+      .card-body {
+        .fas {
+          float: right;
+          color: black;
+
+          &:hover {
+            color: black;
+            cursor: pointer;
+          }
+        }
+      }
     }
 
 

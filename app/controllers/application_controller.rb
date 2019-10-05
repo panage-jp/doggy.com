@@ -15,4 +15,9 @@ class ApplicationController < ActionController::Base
   def set_post
     @post = Post.new
   end
+  def authenticete_user
+    unless current_user || current_user.id == params[:id]
+      redirect_to root_path
+    end
+  end
 end

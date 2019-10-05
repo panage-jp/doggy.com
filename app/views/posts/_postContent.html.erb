@@ -47,7 +47,23 @@
       </div>
     </div>
     <div class="post__maincontent-posts-icons">
-      <a href="#" class="post__maincontent-posts-icons-a"><i class="far fa-heart fa-2x"></i></a><span>12</span>
+
+      <%if user_signed_in?%>
+      <%if Like.find_by(user_id: current_user.id, post_id: post.id)%>
+      <%=link_to("/posts/#{post.id}/likes/#{current_user.id}", class: "post__maincontent-posts-icons-a", method: :delete) do%>
+      <i class="fas fa-heart fa-2x pinked"></i>
+      <%end%>
+      <%else%>
+      <%=link_to(post_likes_path(post.id), class: "post__maincontent-posts-icons-a", method: :post) do%>
+      <i class="far fa-heart fa-2x"></i>
+      <%end%>
+      <%end%>
+      <span><%=post.likes.length%></span>
+      <%else%>
+      <a class="post__maincontent-posts-icons-a"><i
+          class="far fa-heart fa-2x"></i></a><span><%=post.likes.length%></span>
+      <%end%>
+
       <a class="post__maincontent-posts-icons-a"><i
           class="far fa-comment fa-2x"></i></a><span><%=post.comments.length%></span>
     </div>
@@ -116,7 +132,21 @@
       </div>
     </div>
     <div class="post__maincontent-posts-icons">
-      <a href="#" class="post__maincontent-posts-icons-a"><i class="far fa-heart fa-2x"></i></a><span>12</span>
+      <%if user_signed_in?%>
+      <%if Like.find_by(user_id: current_user.id, post_id: post.id)%>
+      <%=link_to("/posts/#{post.id}/likes/#{current_user.id}", class: "post__maincontent-posts-icons-a", method: :delete) do%>
+      <i class="fas fa-heart fa-2x pinked"></i>
+      <%end%>
+      <%else%>
+      <%=link_to(post_likes_path(post.id), class: "post__maincontent-posts-icons-a", method: :post) do%>
+      <i class="far fa-heart fa-2x"></i>
+      <%end%>
+      <%end%>
+      <span><%=post.likes.length%></span>
+      <%else%>
+      <a class="post__maincontent-posts-icons-a"><i
+          class="far fa-heart fa-2x"></i></a><span><%=post.likes.length%></span>
+      <%end%>
       <a href="#" class="post__maincontent-posts-icons-a"><i
           class="far fa-comment fa-2x"></i></a><span><%=post.comments.length%></span>
     </div>

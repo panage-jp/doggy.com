@@ -3,6 +3,7 @@ class Post < ApplicationRecord
   has_many_attached :images
   has_many :tags, through: :post_tags
   has_many :comments
+  has_many :likes
   acts_as_taggable
   validates :image,
   presence: true

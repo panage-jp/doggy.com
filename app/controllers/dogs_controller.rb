@@ -11,11 +11,13 @@ class DogsController < ApplicationController
 
   def destroy
     dog = Dog.find(params[:id])
-    unless current_user || dog.user.id == current_user.id
+    unless current_user && dog.user.id == current_user.id
       redirect_to root_path
-    end 
-    dog.destroy
-    redirect_to user_path(current_user.id)
+    else
+
+      dog.destroy
+      redirect_to user_path(current_user.id)
+    end
   end
 
 

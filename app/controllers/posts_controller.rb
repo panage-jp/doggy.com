@@ -16,11 +16,12 @@ class PostsController < ApplicationController
 
   def destroy
     post = Post.find(params[:id])
-    unless current_user || post.user.id == current_user.id
+    unless current_user && post.user.id == current_user.id
       redirect_to root_path
-    end 
-    post.destroy
-    redirect_to posts_path
+    else 
+      post.destroy
+      redirect_to posts_path
+    end
   end
 
   def show

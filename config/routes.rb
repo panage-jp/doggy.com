@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :posts
   resources :users, :only => [:show,:index]
   resources :dogs, :only => [:create, :destroy, :update]
+  resources :comments, :only => [:create, :destroy]
   get "signin" => "notes#signin"
   get "login" => "notes#login"
   get "post" => "notes#post"

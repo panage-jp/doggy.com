@@ -53,9 +53,11 @@
     <div class="post__maincontent-posts-text">
       <%=post.text[0,12]%>.....<a href="#" class="tuzuki" data-id="<%=id%>">続きを読む</a>
     </div>
+    <%if user_signed_in?%>
     <div class="post__maincontent-posts-commentform">
       <input placeholder="コメントを入力...."></input>
     </div>
+    <%end%>
 
   </div>
 
@@ -159,9 +161,11 @@
       </div>
     </div>
     <a href="#" class="oritatamu" data-id="<%=id%>">...おりたたむ</a>
+    <% if user_signed_in?%>
     <div class="post__maincontent-posts-commentform">
       <input placeholder="コメントを入力...."></input>
     </div>
+    <%end%>
 
   </div>
 </div>

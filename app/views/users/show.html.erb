@@ -3,7 +3,7 @@
   <div class="main">
     <div class="main__title">
       <div class="main__title-content">
-        <%if current_user.avatar.attached?%>
+        <%if @user.avatar.attached?%>
         <%= image_tag @user.avatar.variant(combine_options:{resize:"200x200^",crop:"200x200+0+0",gravity: :center}).processed, class: "avatar-large"%>
         <%else%>
         <i class="fas fa-user-circle fa-8x"></i>
@@ -23,7 +23,7 @@
             <div><i class="fas fa-sticky-note fa-2x"></i> <%=@user.posts.length%></div>
           </div>
           <div class="selfintroduction">
-            <%= simple_format(current_user.introduction)%>
+            <%= simple_format(@user.introduction)%>
           </div>
         </div>
       </div>
@@ -40,19 +40,19 @@
             <div class="modal-body">
 
               <%= form_for(@user, url: user_registration_path, html: { method: :put }) do |f| %>
-              <%unless current_user.avatar.attached?%>
+              <%unless @user.avatar.attached?%>
               <i class="fas fa-user-circle fa-3x"></i>
               <%else%>
-              <%= image_tag current_user.avatar.variant(combine_options:{resize:"50x50^",crop:"50x50+0+0",gravity: :center}).processed, class: "avatar-large"%>
+              <%= image_tag @user.avatar.variant(combine_options:{resize:"50x50^",crop:"50x50+0+0",gravity: :center}).processed, class: "avatar-large"%>
               <%end%>
               <i class="fas fa-image fa-lg" id="file_image"></i>
               <%= f.file_field :avatar ,class: "hide", id: "file_image_input"%>
               <p>ユーザーネーム</p>
-              <%= f.text_field :name, value: "#{current_user.name}", placeholder: "ユーザーネーム"%>
+              <%= f.text_field :name, value: "#{@user.name}", placeholder: "ユーザーネーム"%>
               <p>メールアドレス</p>
-              <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", value: "#{current_user.email}"%>
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", value: "#{@user.email}"%>
               <p>一言プロフィール</p>
-              <%= f.text_area :introduction, autocomplete: "text",value: "#{current_user.introduction}", rows: "5"%>
+              <%= f.text_area :introduction, autocomplete: "text",value: "#{@user.introduction}", rows: "5"%>
               <p>現在のパスワード</p>
               <%= f.password_field :current_password, autocomplete: "current-password" %>
               <br><a href="#" id="open_passform" class="">パスワードを変更する</a>
@@ -123,7 +123,9 @@
             <%end%>
             <div class="card-body px-2 py-3">
               <h5 class="card-title"><%=dog.name%>
+                <% if current_user && current_user.id == @user.id%>
                 <i class="fas fa-cog " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                <%end%>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                   <%=link_to "詳細", dog_path(dog.id), class: "dropdown-item"%>
                   <%=link_to "削除","/dogs/#{dog.id}" , class: "dropdown-item",method: :delete%>

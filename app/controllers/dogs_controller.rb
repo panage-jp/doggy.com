@@ -11,8 +11,13 @@ class DogsController < ApplicationController
 
   def destroy
     dog = Dog.find(params[:id])
-    dog.destroy
-    redirect_to user_path(current_user.id)
+    unless current_user && dog.user.id == current_user.id
+      redirect_to root_path
+    else
+
+      dog.destroy
+      redirect_to user_path(current_user.id)
+    end
   end
 
 
@@ -20,9 +25,6 @@ class DogsController < ApplicationController
 
   def dog_params
     dog_params_result=params.require(:dog).permit(:name,:avatar,:profile,:type).merge(user_id: current_user.id)
-    # unless dog_params_result[:avatar]
-    #   dog_params_result[:avatar] = File.read("app/assets/images/dog.jpeg")
-    # end
     return dog_params_result
   end
 end

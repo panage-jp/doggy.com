@@ -54,7 +54,8 @@
           </div>
           <div class="post__maincontent-posts-icons">
             <a href="#" class="post__maincontent-posts-icons-a"><i class="far fa-heart fa-2x"></i></a><span>12</span>
-            <a href="#" class="post__maincontent-posts-icons-a"><i class="far fa-comment fa-2x"></i></a><span>12</span>
+            <a class="post__maincontent-posts-icons-a"><i
+                class="far fa-comment fa-2x"></i></a><span><%=@post_show.comments.length%></span>
           </div>
           <div class="post__maincontent-posts-text">
             <%=simple_format(@post_show.text)%>
@@ -66,54 +67,39 @@
             </div>
           </div>
           <div class="post__maincontent-posts-comments">
+            <%@post_show.comments.each do |comment|%>
             <div class="post__maincontent-posts-comments-comment">
               <div class="post__maincontent-posts-comments-comment-user">
+                <%unless comment.user.avatar.attached?%>
                 <i class="fas fa-user-circle fa-2x"></i>
-                <a class="user_name" href="#">User_name</a>
+                <%else%>
+                <%= image_tag comment.user.avatar.variant(combine_options:{resize:"32x32^",crop:"32x32+0+0",gravity: :center}).processed, class: "avatar-large"%>
+                <%end%>
+
+                <%=link_to "#{comment.user.name}",user_path(comment.user.id),class: "user_name"%>
               </div>
               <div class="post__maincontent-posts-comments-comment-text">
-                かわいい
+                <%=comment.text%>
               </div>
             </div>
-            <div class="post__maincontent-posts-comments-comment">
-              <div class="post__maincontent-posts-comments-comment-user">
-                <i class="fas fa-user-circle fa-2x"></i>
-                <a class="user_name" href="#">User_name</a>
-              </div>
-              <div class="post__maincontent-posts-comments-comment-text">
-                かわいい
-              </div>
+            <%end%>
+            <% if user_signed_in?%>
+            <%= form_for(@comment, url: comments_path, html: { method: :post }) do |f| %>
+            <div class="post__maincontent-posts-commentform">
+              <%= f.text_field :text, placeholder: "コメントを入力..."%>
             </div>
-            <div class="post__maincontent-posts-comments-comment">
-              <div class="post__maincontent-posts-comments-comment-user">
-                <i class="fas fa-user-circle fa-2x"></i>
-                <a class="user_name" href="#">User_name</a>
-              </div>
-              <div class="post__maincontent-posts-comments-comment-text">
-                かわいい
-              </div>
-            </div>
-            <div class="post__maincontent-posts-comments-comment">
-              <div class="post__maincontent-posts-comments-comment-user">
-                <i class="fas fa-user-circle fa-2x"></i>
-                <a class="user_name" href="#">User_name</a>
-              </div>
-              <div class="post__maincontent-posts-comments-comment-text">
-                かわいい
-              </div>
-            </div>
-          </div>
-          <div class="post__maincontent-posts-commentform">
-            <input placeholder="コメントを入力...."></input>
+            <%= f.text_field :post_id, type: "hidden", value: "#{@post_show.id}"%>
+            <%= f.submit type: "hidden" %>
+            <%end%>
+            <%end%>
+
           </div>
 
         </div>
-
       </div>
     </div>
   </div>
-</div>
 
 
 
-<%= render partial: "/modules/footer"%>
+  <%= render partial: "/modules/footer"%>

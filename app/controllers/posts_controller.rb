@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.includes(:tags).includes(:user).with_attached_images.order(id: "DESC")
+    @posts = Post.includes(comments: :user).includes(:tags).includes(:user).with_attached_images.order(id: "DESC")
     @users = User.all.with_attached_avatar
+    @comment = Comment.new
   end
 
   def create
@@ -15,13 +16,18 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
-    @post.destroy
-    redirect_to posts_path
+    post = Post.find(params[:id])
+    unless current_user && post.user.id == current_user.id
+      redirect_to root_path
+    else 
+      post.destroy
+      redirect_to posts_path
+    end
   end
 
   def show
     @post_show = Post.find(params[:id])
+    @comment = Comment.new
   end
 
   private

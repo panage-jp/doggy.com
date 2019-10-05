@@ -12,7 +12,9 @@
           aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink<%=id%>">
           <%=link_to "詳細", post_path(post.id), class: "dropdown-item"%>
+          <%if current_user && current_user.id == post.user.id%>
           <%=link_to "削除", "/posts/#{post.id}", class: "dropdown-item",method: :delete%>
+          <%end%>
         </div>
       </div>
     </div>
@@ -46,14 +48,21 @@
     </div>
     <div class="post__maincontent-posts-icons">
       <a href="#" class="post__maincontent-posts-icons-a"><i class="far fa-heart fa-2x"></i></a><span>12</span>
-      <a href="#" class="post__maincontent-posts-icons-a"><i class="far fa-comment fa-2x"></i></a><span>12</span>
+      <a class="post__maincontent-posts-icons-a"><i
+          class="far fa-comment fa-2x"></i></a><span><%=post.comments.length%></span>
     </div>
     <div class="post__maincontent-posts-text">
-      <%=post.text[0,12]%>.....<a href="#" class="tuzuki" data-id="<%=id%>">続きを読む</a>
+      <%=post.text[0,12]%>.....<a href="#" class="tuzuki" data-id="<%=id%>">すべて見る</a>
     </div>
+    <% if user_signed_in?%>
+    <%= form_for(@comment, url: comments_path, html: { method: :post }) do |f| %>
     <div class="post__maincontent-posts-commentform">
-      <input placeholder="コメントを入力...."></input>
+      <%= f.text_field :text, placeholder: "コメントを入力..."%>
     </div>
+    <%= f.text_field :post_id, type: "hidden", value: "#{post.id}"%>
+    <%= f.submit type: "hidden" %>
+    <%end%>
+    <%end%>
 
   </div>
 
@@ -72,7 +81,9 @@
           aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink<%=id%>">
           <%=link_to "詳細", post_path(post.id), class: "dropdown-item"%>
+          <%if current_user && current_user.id == post.user.id%>
           <%=link_to "削除", "/posts/#{post.id}", class: "dropdown-item",method: :delete%>
+          <%end%>
         </div>
       </div>
     </div>
@@ -106,7 +117,8 @@
     </div>
     <div class="post__maincontent-posts-icons">
       <a href="#" class="post__maincontent-posts-icons-a"><i class="far fa-heart fa-2x"></i></a><span>12</span>
-      <a href="#" class="post__maincontent-posts-icons-a"><i class="far fa-comment fa-2x"></i></a><span>12</span>
+      <a href="#" class="post__maincontent-posts-icons-a"><i
+          class="far fa-comment fa-2x"></i></a><span><%=post.comments.length%></span>
     </div>
     <div class="post__maincontent-posts-text">
       <%=simple_format(post.text)%>
@@ -116,48 +128,42 @@
         <%end%>
       </div>
     </div>
+
     <div class="post__maincontent-posts-comments">
+      <%post.comments.each do |comment|%>
       <div class="post__maincontent-posts-comments-comment">
         <div class="post__maincontent-posts-comments-comment-user">
+          <%unless comment.user.avatar.attached?%>
           <i class="fas fa-user-circle fa-2x"></i>
-          <a class="user_name" href="#">User_name</a>
+          <%else%>
+          <%= image_tag comment.user.avatar.variant(combine_options:{resize:"32x32^",crop:"32x32+0+0",gravity: :center}).processed, class: "avatar-large"%>
+          <%end%>
+
+          <%=link_to "#{comment.user.name}",user_path(comment.user.id),class: "user_name"%>
+          <%if current_user && comment.user.id == current_user.id%>
+          <i class="fas fa-trash-alt trush" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+          <div class="dropdown-menu">
+            <%=link_to "削除", comment_path(comment.id), method: :delete, class: "dropdown-item"%>
+          </div>
+          <%end%>
         </div>
         <div class="post__maincontent-posts-comments-comment-text">
-          かわいい
+          <%=comment.text%>
         </div>
       </div>
-      <div class="post__maincontent-posts-comments-comment">
-        <div class="post__maincontent-posts-comments-comment-user">
-          <i class="fas fa-user-circle fa-2x"></i>
-          <a class="user_name" href="#">User_name</a>
-        </div>
-        <div class="post__maincontent-posts-comments-comment-text">
-          かわいい
-        </div>
-      </div>
-      <div class="post__maincontent-posts-comments-comment">
-        <div class="post__maincontent-posts-comments-comment-user">
-          <i class="fas fa-user-circle fa-2x"></i>
-          <a class="user_name" href="#">User_name</a>
-        </div>
-        <div class="post__maincontent-posts-comments-comment-text">
-          かわいい
-        </div>
-      </div>
-      <div class="post__maincontent-posts-comments-comment">
-        <div class="post__maincontent-posts-comments-comment-user">
-          <i class="fas fa-user-circle fa-2x"></i>
-          <a class="user_name" href="#">User_name</a>
-        </div>
-        <div class="post__maincontent-posts-comments-comment-text">
-          かわいい
-        </div>
-      </div>
+      <%end%>
+
     </div>
     <a href="#" class="oritatamu" data-id="<%=id%>">...おりたたむ</a>
+    <% if user_signed_in?%>
+    <%= form_for(@comment, url: comments_path, html: { method: :post }) do |f| %>
     <div class="post__maincontent-posts-commentform">
-      <input placeholder="コメントを入力...."></input>
+      <%= f.text_field :text, placeholder: "コメントを入力..."%>
     </div>
+    <%= f.text_field :post_id, type: "hidden", value: "#{post.id}"%>
+    <%= f.submit type: "hidden" %>
+    <%end%>
+    <%end%>
 
   </div>
 </div>

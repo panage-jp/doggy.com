@@ -52,7 +52,7 @@
           class="far fa-comment fa-2x"></i></a><span><%=post.comments.length%></span>
     </div>
     <div class="post__maincontent-posts-text">
-      <%=post.text[0,12]%>.....<a href="#" class="tuzuki" data-id="<%=id%>">続きを読む</a>
+      <%=post.text[0,12]%>.....<a href="#" class="tuzuki" data-id="<%=id%>">すべて見る</a>
     </div>
     <% if user_signed_in?%>
     <%= form_for(@comment, url: comments_path, html: { method: :post }) do |f| %>
@@ -117,7 +117,8 @@
     </div>
     <div class="post__maincontent-posts-icons">
       <a href="#" class="post__maincontent-posts-icons-a"><i class="far fa-heart fa-2x"></i></a><span>12</span>
-      <a href="#" class="post__maincontent-posts-icons-a"><i class="far fa-comment fa-2x"></i></a><span>12</span>
+      <a href="#" class="post__maincontent-posts-icons-a"><i
+          class="far fa-comment fa-2x"></i></a><span><%=post.comments.length%></span>
     </div>
     <div class="post__maincontent-posts-text">
       <%=simple_format(post.text)%>
@@ -139,6 +140,12 @@
           <%end%>
 
           <%=link_to "#{comment.user.name}",user_path(comment.user.id),class: "user_name"%>
+          <%if current_user && comment.user.id == current_user.id%>
+          <i class="fas fa-trash-alt trush" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+          <div class="dropdown-menu">
+            <%=link_to "削除", comment_path(comment.id), method: :delete, class: "dropdown-item"%>
+          </div>
+          <%end%>
         </div>
         <div class="post__maincontent-posts-comments-comment-text">
           <%=comment.text%>

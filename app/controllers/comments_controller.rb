@@ -14,6 +14,13 @@ class CommentsController < ApplicationController
   end
 
   def destroy
+    comment = Comment.find(params[:id])
+    unless current_user && comment.user.id == current_user.id
+      redirect_to root_path
+    else 
+      comment.destroy
+      redirect_to posts_path
+    end
   end
   
   private

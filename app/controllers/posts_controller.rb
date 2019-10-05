@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.includes(:comments).includes(:tags).includes(:user).with_attached_images.order(id: "DESC")
+    @posts = Post.includes(comments: :user).includes(:tags).includes(:user).with_attached_images.order(id: "DESC")
     @users = User.all.with_attached_avatar
     @comment = Comment.new
   end

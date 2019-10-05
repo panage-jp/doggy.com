@@ -48,7 +48,8 @@
     </div>
     <div class="post__maincontent-posts-icons">
       <a href="#" class="post__maincontent-posts-icons-a"><i class="far fa-heart fa-2x"></i></a><span>12</span>
-      <a href="#" class="post__maincontent-posts-icons-a"><i class="far fa-comment fa-2x"></i></a><span>12</span>
+      <a class="post__maincontent-posts-icons-a"><i
+          class="far fa-comment fa-2x"></i></a><span><%=post.comments.length%></span>
     </div>
     <div class="post__maincontent-posts-text">
       <%=post.text[0,12]%>.....<a href="#" class="tuzuki" data-id="<%=id%>">続きを読む</a>

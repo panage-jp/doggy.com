@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'comments/create'
   get 'dogs/new'
   get 'posts/index'
   devise_for :users, controllers: {   registrations: 'users/registrations',
@@ -11,9 +10,5 @@ Rails.application.routes.draw do
   resources :users, :only => [:show,:index]
   resources :dogs, :only => [:create, :destroy, :update]
   resources :comments, :only => [:create, :destroy]
-  get "signin" => "notes#signin"
-  get "login" => "notes#login"
-  get "post" => "notes#post"
-  get "user_index" => "notes#user_index"
-  get "tweet_show" => "notes#tweet_show"
+  resources :likes, only => [:create, :destroy]
 end

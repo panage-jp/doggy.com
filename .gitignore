@@ -27,5 +27,5 @@
 /config/master.key
 
 #Ignore unnecessary view file
-/app/views/notes/main2/_btn.html.erb
+/app/views/notes/main2/
 

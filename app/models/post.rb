@@ -5,8 +5,8 @@ class Post < ApplicationRecord
   has_many :comments
   has_many :likes
   acts_as_taggable
-  validates :image,
-  presence: true
+  validates :images,
+    presence: true
   validates :text,
     length: {maximum: 200}
 end

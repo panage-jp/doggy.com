@@ -4,6 +4,10 @@ class UsersController < ApplicationController
     @posts = @user.posts.with_attached_images
     @dogs = @user.dogs.with_attached_avatar
     @dog = Dog.new
+    @like_length = 0
+    @posts.each do |post|
+      @like_length += post.likes.length
+    end
     
   end
 

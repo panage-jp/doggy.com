@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: lp1_production
-  username: lp1
-  password: <%= ENV['LP1_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock

@@ -187,7 +187,7 @@
         <em class="h1">人気のユーザー</em>
       </div>
       <div class="row">
-        <div class="col-sm-6 col-md-4 user1">
+        <div class="col-sm-4 col-md-4 user1">
           <%= link_to(user_path(@users[0].id)) do%>
           <div class="card img-thumbnail">
             <%= image_tag @users[0].avatar.variant(combine_options:{resize:"260x260^",crop:"260x260+0+0",gravity: :center}).processed %>
@@ -198,7 +198,7 @@
           </div>
           <%end%>
         </div>
-        <div class="col-sm-6 col-md-4 user2">
+        <div class="col-sm-4 col-md-4 user2">
           <%= link_to(user_path(@users[1].id)) do%>
           <div class="card img-thumbnail">
             <%= image_tag @users[1].avatar.variant(combine_options:{resize:"260x260^",crop:"260x260+0+0",gravity: :center}).processed %>
@@ -209,7 +209,7 @@
           </div>
           <%end%>
         </div>
-        <div class="col-sm-6 col-md-4 user3">
+        <div class="col-sm-4 col-md-4 user3">
           <%= link_to(user_path(@users[2].id)) do %>
           <div class="card img-thumbnail">
             <%= image_tag @users[2].avatar.variant(combine_options:{resize:"260x260^",crop:"260x260+0+0",gravity: :center}).processed %>

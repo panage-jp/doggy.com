@@ -70,3 +70,7 @@ gem 'mini_magick'
 
 #タグ機能追加のため
 gem 'acts-as-taggable-on', '~> 6.0' 
+#本番環境ユニコーン
+group :production do
+  gem 'unicorn', '5.4.1'
+end

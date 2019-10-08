@@ -24,7 +24,7 @@
         </div>
         <%end%>
         <div class="post__pickedUser">
-
+          <%if @users%>
           <div class="post__pickedUser-title">
             <p class="osusume">おすすめ</p>
             <a href="/users" class="subete">すべて見る</a>
@@ -55,7 +55,7 @@
             <%end%>
             <%=link_to "#{@users[2].name}",user_path(@users[2].id),class: "user_name"%>
           </div>
-
+          <%end%>
         </div>
       </div>
       <div class="post_row_right col-xs-12 col-sm-6 ">

@@ -65,7 +65,7 @@ gem 'jquery-rails'
 gem 'pry-rails'
 gem 'devise'
 gem 'mini_magick'
-gem 'aws-sdk-s3'
+gem 'aws-sdk-s3', require: false
 #タグ機能追加のため
 gem 'acts-as-taggable-on', '~> 6.0' 
 #本番環境ユニコーン

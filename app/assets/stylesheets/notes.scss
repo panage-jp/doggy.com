@@ -58,16 +58,12 @@
     border-bottom: solid 1px #E4E4E4;
   }
 
-  .hide {
-    display: none;
-  }
 }
 
 .main2 {
   padding-bottom: 60px;
 
-  .col-md-4 {
-    padding: 0 100px;
+  .col-md-3 {
 
     .card {
       &:hover {
@@ -78,16 +74,6 @@
     a {
       color: black;
     }
-  }
-
-  .user1 {
-    padding-right: 0px;
-    padding-left: 200px;
-  }
-
-  .user3 {
-    padding-right: 200px;
-    padding-left: 0px;
   }
 
   .btn-block {

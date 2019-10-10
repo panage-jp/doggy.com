@@ -89,6 +89,17 @@
     padding-right: 200px;
     padding-left: 0px;
   }
+
+  .btn-block {
+    width: 200px;
+    background-color: #285ca6;
+    border: none;
+
+    &:hover {
+      background-color: #285ca6;
+      opacity: 0.7;
+    }
+  }
 }
 
 .main3 {
@@ -97,6 +108,17 @@
 
   .card {
     &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .btn-block {
+    width: 200px;
+    background-color: #285ca6;
+    border: none;
+
+    &:hover {
+      background-color: #285ca6;
       opacity: 0.7;
     }
   }
@@ -114,16 +136,7 @@
   }
 }
 
-.btn-block {
-  width: 200px;
-  background-color: #285ca6;
-  border: none;
 
-  &:hover {
-    background-color: #285ca6;
-    opacity: 0.7;
-  }
-}
 
 .dog-icon {
   margin-top: 40px;

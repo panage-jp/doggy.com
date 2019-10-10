@@ -39,26 +39,26 @@ $(function () {
     })
 
 
-  if (location.href == "http://localhost:3000/") {
-    //フッダーの犬をクリックすると上にスライド
 
-    $('.fa-dog').on('click', function () {
-      $("html,body").animate({
-        scrollTop: 0,
+  //フッダーの犬をクリックすると上にスライド
 
-      }, 600);
+  $('.fa-dog').on('click', function () {
+    $("html,body").animate({
+      scrollTop: 0,
+
+    }, 600);
+  });
+
+
+
+  //pickeddogホバー処理
+
+  $(".picked_dog")
+    .mouseover(function () {
+      $(this).find(".card-img-overlay").removeClass("hide");
+    })
+    .mouseout(function () {
+      $(this).find(".card-img-overlay").addClass("hide");
     });
 
-
-
-    //pickeddogホバー処理
-
-    $(".picked_dog")
-      .mouseover(function () {
-        $(this).find(".card-img-overlay").removeClass("hide");
-      })
-      .mouseout(function () {
-        $(this).find(".card-img-overlay").addClass("hide");
-      });
-  }
 });

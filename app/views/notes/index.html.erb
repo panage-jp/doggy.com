@@ -27,19 +27,16 @@
   </div>
 
 
-
-
-
   <div class="main1 container-fluid">
     <div class="titles">
       <em class="h1">Pickup Dogs</em>
     </div>
 
-    <div class="row under_line">
-      <div class="col-xs-0 col-sm-2 col-md-2">
+    <div class="row ">
+      <div class="col-xs-0 col-sm-2 col-md-2 cards">
       </div>
 
-      <div class="col-xs-2 col-sm-2 col-md-2">
+      <div class="col-xs-2 col-sm-6 col-md-2 cards">
         <a href="#" class="card picked_dog">
           <%if @dogs[0].avatar.attached?%>
 
@@ -56,7 +53,7 @@
         </a>
       </div>
 
-      <div class="col-xs-2 col-sm-2 col-md-2">
+      <div class="col-xs-2 col-sm-6 col-md-2 cards" id="dog_padding">
         <a href="#" class="card picked_dog">
           <%if @dogs[1].avatar.attached?%>
 
@@ -73,7 +70,7 @@
         </a>
       </div>
 
-      <div class="col-xs-6 col-sm-2 col-md-2">
+      <div class="col-xs-2 col-sm-6 col-md-2 cards">
         <a href="#" class="card picked_dog">
           <%if @dogs[2].avatar.attached?%>
 
@@ -90,7 +87,7 @@
         </a>
       </div>
 
-      <div class="col-xs-6 col-sm-2 col-md-2">
+      <div class="col-xs-2 col-sm-6 col-md-2 cards">
         <a href="#" class="card picked_dog">
           <%if @dogs[3].avatar.attached?%>
 
@@ -106,14 +103,15 @@
           </div>
         </a>
       </div>
+    </div>
 
 
-      <div class="col-xs-0 col-sm-2 col-md-2">
+
+    <div class="row row-underline" id="row_second">
+      <div class="col-xs-0 col-sm-2 col-md-2 cards">
       </div>
-      <div class="col-xs-0 col-sm-2 col-md-2">
-      </div>
 
-      <div class="col-xs-6 col-sm-2 col-md-2">
+      <div class="col-xs-2 col-sm-6 col-md-2 cards ">
         <a href="#" class="card picked_dog">
           <%if @dogs[4].avatar.attached?%>
 
@@ -130,7 +128,7 @@
         </a>
       </div>
 
-      <div class="col-xs-6 col-sm-2 col-md-2">
+      <div class="col-xs-2 col-sm-6 col-md-2 cards">
         <a href="#" class="card picked_dog">
           <%if @dogs[5].avatar.attached?%>
 
@@ -147,7 +145,7 @@
         </a>
       </div>
 
-      <div class="col-xs-6 col-sm-2 col-md-2">
+      <div class="col-xs-2 col-sm-6 col-md-2 cards">
         <a href="#" class="card picked_dog">
           <%if @dogs[6].avatar.attached?%>
 
@@ -163,7 +161,7 @@
           </div>
         </a>
       </div>
-      <div class="col-xs-6 col-sm-2 col-md-2">
+      <div class="col-xs-2 col-sm-6 col-md-2 cards">
         <a href="#" class="card picked_dog">
           <%if @dogs[7].avatar.attached?%>
 
@@ -179,185 +177,186 @@
           </div>
         </a>
       </div>
-
-    </div>
-
-    <div class="main2 container">
-      <div class="titles">
-        <em class="h1">人気のユーザー</em>
-      </div>
-      <div class="row">
-
-        <div class="col-xs-1 col-sm-6 col-md-3 user1">
-          <%= link_to(user_path(@users[0].id)) do%>
-          <div class="card img-thumbnail">
-            <%= image_tag @users[0].avatar.variant(combine_options:{resize:"260x260^",crop:"260x260+0+0",gravity: :center}).processed %>
-            <div class="card-body px-2 py-3">
-              <h5 class="card-title">@<%=@users[0].name%></h5>
-              <p class="card-text"><%=simple_format(@users[0].introduction)%></p>
-            </div>
-          </div>
-          <%end%>
-        </div>
-        <div class="col-xs-1 col-sm-6 col-md-3 user2">
-          <%= link_to(user_path(@users[1].id)) do%>
-          <div class="card img-thumbnail">
-            <%= image_tag @users[1].avatar.variant(combine_options:{resize:"260x260^",crop:"260x260+0+0",gravity: :center}).processed %>
-            <div class="card-body px-2 py-3">
-              <h5 class="card-title">@<%=@users[1].name%></h5>
-              <p class="card-text"><%=simple_format(@users[1].introduction)%></p>
-            </div>
-          </div>
-          <%end%>
-        </div>
-        <div class=" col-xs-1 col-sm-6 col-md-3 user3">
-          <%= link_to(user_path(@users[2].id)) do %>
-          <div class="card img-thumbnail">
-            <%= image_tag @users[2].avatar.variant(combine_options:{resize:"260x260^",crop:"260x260+0+0",gravity: :center}).processed %>
-            <div class="card-body px-2 py-3">
-              <h5 class="card-title">@<%=@users[2].name%></h5>
-              <p class="card-text"><%=simple_format(@users[2].introduction)%></p>
-            </div>
-          </div>
-          <%end%>
-
-        </div>
-        <div class=" col-xs-1 col-sm-6 col-md-3 user3">
-          <%= link_to(user_path(@users[3].id)) do %>
-          <div class="card img-thumbnail">
-            <%= image_tag @users[3].avatar.variant(combine_options:{resize:"260x260^",crop:"260x260+0+0",gravity: :center}).processed %>
-            <div class="card-body px-2 py-3">
-              <h5 class="card-title">@<%=@users[3].name%></h5>
-              <p class="card-text"><%=simple_format(@users[3].introduction)%></p>
-            </div>
-          </div>
-          <%end%>
-
-        </div>
-
-      </div>
-
-      <a class="btn btn-primary btn-block container" href="#" role="button">View more</a>
-    </div>
-    <div class="main3 container-fluid">
-      <div class="titles">
-        <em class="h1">Items</em>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-2 col-sm-0 col-md-2">
-        </div>
-
-        <div class="col-xs-2 col-sm-6 col-md-2">
-          <a href="#" class="card">
-            <img class="card-img" src="/images/love.png" alt="商品">
-          </a>
-
-        </div>
-        <div class="col-xs-2 col-sm-6 col-md-2">
-          <a href="#" class="card">
-            <img class="card-img" src="/images/love.png" alt="商品">
-          </a>
-
-        </div>
-        <div class="col-xs-2 col-sm-6 col-md-2">
-          <a href="#" class="card">
-            <img class="card-img" src="/images/love.png" alt="商品">
-          </a>
-
-        </div>
-        <div class="col-xs-2 col-sm-6 col-md-2">
-          <a href="#" class="card">
-            <img class="card-img" src="/images/love.png" alt="商品">
-          </a>
-
-        </div>
-
-      </div>
-      <div class="row">
-        <div class="col-xs-2 col-sm-0 col-md-2">
-        </div>
-
-        <div class="col-xs-2 col-sm-6 col-md-2">
-          <a href="#" class="card">
-            <img class="card-img" src="/images/love.png" alt="商品">
-          </a>
-
-        </div>
-        <div class="col-xs-2 col-sm-6 col-md-2">
-          <a href="#" class="card">
-            <img class="card-img" src="/images/love.png" alt="商品">
-          </a>
-
-        </div>
-        <div class="col-xs-2 col-sm-6 col-md-2">
-          <a href="#" class="card">
-            <img class="card-img" src="/images/love.png" alt="商品">
-          </a>
-
-        </div>
-        <div class="col-xs-2 col-sm-6 col-md-2">
-          <a href="#" class="card">
-            <img class="card-img " src="/images/love.png" alt="商品">
-          </a>
-
-        </div>
-
-
-      </div>
-      <a class="btn btn-primary btn-block container" href="#" role="button">View more</a>
-    </div>
-
-
-
-
-
-
-
-
-    <div class="main4 container-fluid">
-      <div class="titles">
-        <em class="h1">Instagrams</em>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-2 col-sm-0 col-md-2">
-        </div>
-
-        <div class="col-xs-2 col-sm-6 col-md-2">
-          <a href="#" class="card">
-            <img class="card-img" src="/images/love.png" alt="インスタ">
-          </a>
-
-        </div>
-        <div class="col-xs-2 col-sm-6 col-md-2">
-          <a href="#" class="card">
-            <img class="card-img" src="/images/love.png" alt="インスタ">
-          </a>
-
-        </div>
-        <div class="col-xs-2 col-sm-6 col-md-2">
-          <a href="#" class="card">
-            <img class="card-img" src="/images/love.png" alt="インスタ">
-          </a>
-
-        </div>
-        <div class="col-xs-2 col-sm-6 col-md-2">
-          <a href="#" class="card">
-            <img class="card-img" src="/images/love.png" alt="インスタ">
-          </a>
-
-        </div>
-
-      </div>
-
-
-
-    </div>
-    <div class="dog-icon">
-      <i class="fas fa-dog fa-3x "></i>
     </div>
 
   </div>
 
-  <%= render partial: "/modules/footer"%>
+  <div class="main2 container">
+    <div class="titles">
+      <em class="h1">人気ユーザー</em>
+    </div>
+    <div class="row">
+
+      <div class="col-xs-1 col-sm-6 col-md-3 user1 cards">
+        <%= link_to(user_path(@users[0].id)) do%>
+        <div class="card img-thumbnail">
+          <%= image_tag @users[0].avatar.variant(combine_options:{resize:"260x260^",crop:"260x260+0+0",gravity: :center}).processed %>
+          <div class="card-body px-2 py-3">
+            <h5 class="card-title">@<%=@users[0].name%></h5>
+            <p class="card-text"><%=simple_format(@users[0].introduction)%></p>
+          </div>
+        </div>
+        <%end%>
+      </div>
+      <div class="col-xs-1 col-sm-6 col-md-3 user2 cards">
+        <%= link_to(user_path(@users[1].id)) do%>
+        <div class="card img-thumbnail">
+          <%= image_tag @users[1].avatar.variant(combine_options:{resize:"260x260^",crop:"260x260+0+0",gravity: :center}).processed %>
+          <div class="card-body px-2 py-3">
+            <h5 class="card-title">@<%=@users[1].name%></h5>
+            <p class="card-text"><%=simple_format(@users[1].introduction)%></p>
+          </div>
+        </div>
+        <%end%>
+      </div>
+      <div class=" col-xs-1 col-sm-6 col-md-3 user3 cards">
+        <%= link_to(user_path(@users[2].id)) do %>
+        <div class="card img-thumbnail">
+          <%= image_tag @users[2].avatar.variant(combine_options:{resize:"260x260^",crop:"260x260+0+0",gravity: :center}).processed %>
+          <div class="card-body px-2 py-3">
+            <h5 class="card-title">@<%=@users[2].name%></h5>
+            <p class="card-text"><%=simple_format(@users[2].introduction)%></p>
+          </div>
+        </div>
+        <%end%>
+
+      </div>
+      <div class=" col-xs-1 col-sm-6 col-md-3 user3 cards">
+        <%= link_to(user_path(@users[3].id)) do %>
+        <div class="card img-thumbnail">
+          <%= image_tag @users[3].avatar.variant(combine_options:{resize:"260x260^",crop:"260x260+0+0",gravity: :center}).processed %>
+          <div class="card-body px-2 py-3">
+            <h5 class="card-title">@<%=@users[3].name%></h5>
+            <p class="card-text"><%=simple_format(@users[3].introduction)%></p>
+          </div>
+        </div>
+        <%end%>
+
+      </div>
+
+    </div>
+
+    <a class="btn btn-primary btn-block container" href="#" role="button">View more</a>
+  </div>
+  <div class="main3 container-fluid">
+    <div class="titles">
+      <em class="h1">Items</em>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-2 col-sm-0 col-md-2 cards">
+      </div>
+
+      <div class="col-xs-2 col-sm-6 col-md-2 cards">
+        <a href="#" class="card">
+          <img class="card-img" src="/images/love.png" alt="商品">
+        </a>
+
+      </div>
+      <div class="col-xs-2 col-sm-6 col-md-2 cards">
+        <a href="#" class="card">
+          <img class="card-img" src="/images/love.png" alt="商品">
+        </a>
+
+      </div>
+      <div class="col-xs-2 col-sm-6 col-md-2 cards">
+        <a href="#" class="card">
+          <img class="card-img" src="/images/love.png" alt="商品">
+        </a>
+
+      </div>
+      <div class="col-xs-2 col-sm-6 col-md-2 cards">
+        <a href="#" class="card">
+          <img class="card-img" src="/images/love.png" alt="商品">
+        </a>
+
+      </div>
+
+    </div>
+    <div class="row" id="row_second">
+      <div class="col-xs-2 col-sm-0 col-md-2 cards">
+      </div>
+
+      <div class="col-xs-2 col-sm-6 col-md-2 cards">
+        <a href="#" class="card">
+          <img class="card-img" src="/images/love.png" alt="商品">
+        </a>
+
+      </div>
+      <div class="col-xs-2 col-sm-6 col-md-2 cards">
+        <a href="#" class="card">
+          <img class="card-img" src="/images/love.png" alt="商品">
+        </a>
+
+      </div>
+      <div class="col-xs-2 col-sm-6 col-md-2 cards">
+        <a href="#" class="card">
+          <img class="card-img" src="/images/love.png" alt="商品">
+        </a>
+
+      </div>
+      <div class="col-xs-2 col-sm-6 col-md-2 cards">
+        <a href="#" class="card">
+          <img class="card-img " src="/images/love.png" alt="商品">
+        </a>
+
+      </div>
+
+
+    </div>
+    <a class="btn btn-primary btn-block container" href="#" role="button">View more</a>
+  </div>
+
+
+
+
+
+
+
+
+  <div class="main4 container-fluid">
+    <div class="titles">
+      <em class="h1">Instagrams</em>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-2 col-sm-0 col-md-2 cards">
+      </div>
+
+      <div class="col-xs-2 col-sm-6 col-md-2 cards">
+        <a href="#" class="card">
+          <img class="card-img" src="/images/love.png" alt="インスタ">
+        </a>
+
+      </div>
+      <div class="col-xs-2 col-sm-6 col-md-2 cards">
+        <a href="#" class="card">
+          <img class="card-img" src="/images/love.png" alt="インスタ">
+        </a>
+
+      </div>
+      <div class="col-xs-2 col-sm-6 col-md-2 cards">
+        <a href="#" class="card">
+          <img class="card-img" src="/images/love.png" alt="インスタ">
+        </a>
+
+      </div>
+      <div class="col-xs-2 col-sm-6 col-md-2 cards">
+        <a href="#" class="card">
+          <img class="card-img" src="/images/love.png" alt="インスタ">
+        </a>
+
+      </div>
+
+    </div>
+
+
+
+  </div>
+  <div class="dog-icon">
+    <i class="fas fa-dog fa-3x "></i>
+  </div>
+
+</div>
+
+<%= render partial: "/modules/footer"%>

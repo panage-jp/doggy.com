@@ -24,9 +24,18 @@
 
 
 
-.row {
-  padding-bottom: 40px;
+.cards {
+  margin-bottom: 10px;
+}
 
+@media(max-width: 670px) {
+  #row_second {
+    display: none;
+  }
+
+  .cards {
+    text-align: center;
+  }
 }
 
 .main1 {

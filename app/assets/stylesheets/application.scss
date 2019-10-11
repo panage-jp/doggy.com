@@ -40,3 +40,9 @@ body {
 .avatar-large {
   border-radius: 50%;
 }
+
+@media(max-width: 670px) {
+  #media_hide {
+    display: none;
+  }
+}

@@ -19,7 +19,7 @@
                 class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="media_min_hide" data-toggle="modal" data-target="#myModal">投稿する</a>
+            <a class="nav-link" id="media_min_hide" data-toggle="modal" data-target="#myModalMedia">投稿する</a>
           </li>
           <li class="nav-item">
             <%= link_to "ログアウト", destroy_user_session_path, class: "nav-link", method: :delete%>
@@ -50,6 +50,39 @@
         <a class="nav-link logs" href="#" id="media_hide"><img class="log" src="/images/inst_log2.png"></a>
       </div>
     </nav>
+
+    <div class="modal fade" id="myModalMedia" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">新規投稿する</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <%=form_for @post do |f|%>
+          <div class="modal-body">
+            <%=f.text_area :text, rows: "8", placeholder: "テキスト"%>
+            <div>
+              <%=f.text_field :tag_list, placeholder: "#タグを追加", "data-role" => "tagsinput"%>
+            </div>
+            <div class="posted_images">
+            </div>
+            <div class="post__form-image">
+              <button type="button" class="btn btn-light" id="image_post">画像を追加</button>
+              <%= f.file_field :images ,class: "hide", id: "image_post_input", multiple: true%>
+              <button type="button" class="btn btn-light">MyDoggyを選択</button>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <%= f.submit "投稿する", class: "btn btn-primary"%>
+          </div>
+          <%end%>
+        </div>
+      </div>
+    </div>
+
+
 
     <div class="header_second" style="background-color: #0b2345" id="media_hide">
       <ul class="nav list_nav">

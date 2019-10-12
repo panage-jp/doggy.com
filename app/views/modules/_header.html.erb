@@ -11,12 +11,15 @@
         <ul class="navbar-nav ">
           <%if current_user.avatar.attached?%>
           <li class="nav-item">
-            <%= image_tag current_user.avatar.variant(combine_options:{resize:"30x30^",crop:"30x30+0+0",gravity: :center}).processed, class: "avatar-large"%>
+            <%= image_tag current_user.avatar.variant(combine_options:{resize:"30x30^",crop:"30x30+0+0",gravity: :center}).processed, class: "avatar-large", id: "media_hide"%>
           </li>
           <%end%>
           <li class="nav-item">
             <a class="nav-link" href="/users/<%=current_user.id%>"><%=current_user.name%>さん <span
                 class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="media_min_hide" data-toggle="modal" data-target="#myModal">投稿する</a>
           </li>
           <li class="nav-item">
             <%= link_to "ログアウト", destroy_user_session_path, class: "nav-link", method: :delete%>
@@ -43,8 +46,8 @@
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         </form>
-        <a class="nav-link logs" href="#"><img class="log" src="/images/f_log.png"></a>
-        <a class="nav-link logs" href="#"><img class="log" src="/images/inst_log2.png"></a>
+        <a class="nav-link logs" href="#" id="media_hide"><img class="log" src="/images/f_log.png"></a>
+        <a class="nav-link logs" href="#" id="media_hide"><img class="log" src="/images/inst_log2.png"></a>
       </div>
     </nav>
 

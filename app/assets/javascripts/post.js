@@ -21,4 +21,9 @@ $(function () {
     e.preventDefault()
     $("#image_post_input").trigger('click');
   });
+
+  $("#image_post_media").click(function (e) {
+    e.preventDefault()
+    $("#image_post_input_media").trigger('click');
+  });
 })

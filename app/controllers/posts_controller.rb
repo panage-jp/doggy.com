@@ -9,7 +9,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.save
     if @post.save
-      redirect_to root_path
+      redirect_to posts_path
     else
       redirect_to root_path
     end

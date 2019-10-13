@@ -6,6 +6,7 @@ class NotesController < ApplicationController
   def index
     @users = User.with_attached_avatar
     @dogs = Dog.eager_load(:user).all.with_attached_avatar
+    @posts = Post.all.with_attached_images
   end
 
   # GET /notes/1
